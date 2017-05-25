@@ -20,9 +20,6 @@ const onSignIn = function (event) {
 }
 const onSignOut = function (event) {
   event.preventDefault()
-  const cartEvents = require('../carts/events')
-  const id = store.cart._id
-  cartEvents.deleteCart(id)
   userApi.signOut()
     .then(userUi.signOutSuccess)
     .catch(userUi.signOutFailure)
