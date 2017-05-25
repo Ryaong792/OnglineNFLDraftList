@@ -12,14 +12,87 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+
+<div class="password">
+  <h1>Password Area</h1>
+<div>
+  <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="sign-in">
+                        <div class="form-group">
+                          <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                          <input type="email" name="credentials[email]" class="form-control" placeholder="Email address" required>
+                        </div>
+                        <div class="form-group">
+                          <label class="sr-only" for="exampleInputPassword2">Password</label>
+                          <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                          <button type="submit" class="btn btn-primary btn-block">Sign-In</button>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="bottom text-center">
+                      Dont have an account? <a href="#" class="linkSignUp"><b>Sign-Up</b></a>
+                    </div>
+                  </div>
+
+
+                  <div class="row sign-up">
+                    <div class="col-md-12">
+                      <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="sign-up">
+                        <div class="form-group">
+                          <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                          <input type="email" name="credentials[email]" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                        </div>
+                        <div class="form-group">
+                          <label class="sr-only" for="exampleInputPassword2">Password</label>
+                          <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                          <label class="sr-only" for="exampleInputPassword2">Confirm Password</label>
+                          <input type="password" name="credentials[password_confirmation]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                          <button type="submit" class="btn btn-primary btn-block">Sign-Up</button>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="bottom text-center">
+                      Already have an account? <a href="#" class="linkSignIn"><b>Sign-In</b></a>
+                    </div>
+                  </div>
+
+
+                      <div class="row change-password">
+                        <div class="col-md-12">
+                          <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="change-password">
+                            <div class="form-group">
+                              <label class="sr-only" for="exampleInputPassword2">Old Password</label>
+                              <input type="password" name="passwords[old]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                              <label class="sr-only" for="exampleInputPassword2">New Password</label>
+                              <input type="password" name="passwords[new]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                              <button type="submit" class="btn btn-primary btn-block">change-password</button>
+                            </div>
+                          </form>
+                        </div>
+
+
+                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="sign-out">
+  <button type="submit" class="btn btn-primary btn-block">Sign Out</button>
+</form>
+
+</div>
+
+
+
+<div>
+</div>
+
+
+
     </body>
 </html>
