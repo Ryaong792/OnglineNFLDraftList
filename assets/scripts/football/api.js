@@ -29,10 +29,18 @@ const indexTes = (id) => {
     method: 'GET'
   })
 }
+// ************* K(kickers) Get request API *******************
+const indexKs = (id) => {
+  return $.ajax({
+    url: config.apiOrigin + '/ks',
+    method: 'GET'
+  })
+}
 
 module.exports = {
   indexQbs,
   indexRbs,
   indexWrs,
-  indexTes
+  indexTes,
+  indexKs
 }

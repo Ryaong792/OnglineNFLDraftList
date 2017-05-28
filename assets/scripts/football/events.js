@@ -31,17 +31,25 @@ const getTes = function (event) {
   .then(footUi.getTesSuccess)
   .catch(footUi.getTesFailure)
 }
-
+// ************** K(kickers) READ/DISDPLAY ****************
+const getKs = function (event) {
+  const player = $(this).attr('id')
+  footApi.indexKs(player)
+  .then(footUi.getKsSuccess)
+  .catch(footUi.getKsFailure)
+}
 const addHandlers = () => {
   $('.QBS').on('click', getQbs)
   $('.RBS').on('click', getRbs)
   $('.WRS').on('click', getWrs)
   $('.TES').on('click', getTes)
+  $('.KS').on('click', getKs)
 }
 
 module.exports = {
   getQbs,
   getRbs,
   getWrs,
+  getKs,
   addHandlers
 }
