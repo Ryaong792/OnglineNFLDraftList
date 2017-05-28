@@ -10,7 +10,6 @@ const getQbs = function (event) {
   .then(footUi.getQbsSuccess)
   .catch(footUi.getQbsFailure)
 }
-
 // ************** RB READ/DISDPLAY ****************
 const getRbs = function (event) {
   const player = $(this).attr('id')
@@ -25,11 +24,19 @@ const getWrs = function (event) {
   .then(footUi.getWrsSuccess)
   .catch(footUi.getWrsFailure)
 }
+// ************** TE READ/DISDPLAY ****************
+const getTes = function (event) {
+  const player = $(this).attr('id')
+  footApi.indexTes(player)
+  .then(footUi.getTesSuccess)
+  .catch(footUi.getTesFailure)
+}
 
 const addHandlers = () => {
   $('.QBS').on('click', getQbs)
   $('.RBS').on('click', getRbs)
   $('.WRS').on('click', getWrs)
+  $('.TES').on('click', getTes)
 }
 
 module.exports = {

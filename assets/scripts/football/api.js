@@ -22,9 +22,17 @@ const indexWrs = (id) => {
     method: 'GET'
   })
 }
+// ************* TE Get request API *******************
+const indexTes = (id) => {
+  return $.ajax({
+    url: config.apiOrigin + '/tes',
+    method: 'GET'
+  })
+}
 
 module.exports = {
   indexQbs,
   indexRbs,
-  indexWrs
+  indexWrs,
+  indexTes
 }

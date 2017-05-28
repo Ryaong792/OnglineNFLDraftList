@@ -3,6 +3,7 @@
 const showQbsTemplate = require('../templates/qbs.handlebars')
 const showRbsTemplate = require('../templates/rbs.handlebars')
 const showWrsTemplate = require('../templates/wrs.handlebars')
+const showTesTemplate = require('../templates/tes.handlebars')
 
 // ************** QB onSuccess/failure ****************
 const getQbsSuccess = (data) => {
@@ -28,7 +29,7 @@ const getRbsSuccess = (data) => {
 const getRbsFailure = (error) => {
   console.log(error)
 }
-// ************** RB onSuccess/failure ****************
+// ************** WR onSuccess/failure ****************
 const getWrsSuccess = (data) => {
   console.log(data)
   const showWrsHTML = showWrsTemplate({
@@ -40,6 +41,18 @@ const getWrsSuccess = (data) => {
 const getWrsFailure = (error) => {
   console.log(error)
 }
+// ************** TE onSuccess/failure ****************
+const getTesSuccess = (data) => {
+  console.log(data)
+  const showTesHTML = showTesTemplate({
+    tes: data.tes
+  })
+  $('.TE').append(showTesHTML)
+}
+
+const getTesFailure = (error) => {
+  console.log(error)
+}
 
 module.exports = {
   getQbsSuccess,
@@ -47,5 +60,7 @@ module.exports = {
   getRbsSuccess,
   getRbsFailure,
   getWrsSuccess,
-  getWrsFailure
+  getWrsFailure,
+  getTesSuccess,
+  getTesFailure
 }
