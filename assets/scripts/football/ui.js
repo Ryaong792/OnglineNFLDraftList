@@ -1,7 +1,8 @@
 'use strict'
-const store = require('../store')
+// const store = require('../store')
 const showQbsTemplate = require('../templates/qbs.handlebars')
 const showRbsTemplate = require('../templates/rbs.handlebars')
+const showWrsTemplate = require('../templates/wrs.handlebars')
 
 // ************** QB onSuccess/failure ****************
 const getQbsSuccess = (data) => {
@@ -27,10 +28,24 @@ const getRbsSuccess = (data) => {
 const getRbsFailure = (error) => {
   console.log(error)
 }
+// ************** RB onSuccess/failure ****************
+const getWrsSuccess = (data) => {
+  console.log(data)
+  const showWrsHTML = showWrsTemplate({
+    wrs: data.wrs
+  })
+  $('.WR').append(showWrsHTML)
+}
+
+const getWrsFailure = (error) => {
+  console.log(error)
+}
 
 module.exports = {
   getQbsSuccess,
   getQbsFailure,
   getRbsSuccess,
-  getRbsFailure
+  getRbsFailure,
+  getWrsSuccess,
+  getWrsFailure
 }

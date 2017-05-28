@@ -18,14 +18,23 @@ const getRbs = function (event) {
   .then(footUi.getRbsSuccess)
   .catch(footUi.getRbsFailure)
 }
+// ************** WR READ/DISDPLAY ****************
+const getWrs = function (event) {
+  const player = $(this).attr('id')
+  footApi.indexWrs(player)
+  .then(footUi.getWrsSuccess)
+  .catch(footUi.getWrsFailure)
+}
 
 const addHandlers = () => {
   $('.QBS').on('click', getQbs)
   $('.RBS').on('click', getRbs)
+  $('.WRS').on('click', getWrs)
 }
 
 module.exports = {
   getQbs,
   getRbs,
+  getWrs,
   addHandlers
 }
