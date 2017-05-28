@@ -8,7 +8,15 @@ const indexQbs = (id) => {
     method: 'GET'
   })
 }
+// ************* RB Get request API *******************
+const indexRbs = (id) => {
+  return $.ajax({
+    url: config.apiOrigin + '/rbs',
+    method: 'GET'
+  })
+}
 
 module.exports = {
-  indexQbs
+  indexQbs,
+  indexRbs
 }
