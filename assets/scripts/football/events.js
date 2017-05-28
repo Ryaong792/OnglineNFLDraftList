@@ -38,12 +38,21 @@ const getKs = function (event) {
   .then(footUi.getKsSuccess)
   .catch(footUi.getKsFailure)
 }
+// ************** DST(Defense Team) READ/DISDPLAY ****************
+const getDsts = function (event) {
+  const player = $(this).attr('id')
+  footApi.indexDsts(player)
+  .then(footUi.getDstsSuccess)
+  .catch(footUi.getDstsFailure)
+}
+
 const addHandlers = () => {
   $('.QBS').on('click', getQbs)
   $('.RBS').on('click', getRbs)
   $('.WRS').on('click', getWrs)
   $('.TES').on('click', getTes)
   $('.KS').on('click', getKs)
+  $('.DST').on('click', getDsts)
 }
 
 module.exports = {

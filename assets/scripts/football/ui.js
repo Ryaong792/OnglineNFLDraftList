@@ -5,6 +5,7 @@ const showRbsTemplate = require('../templates/rbs.handlebars')
 const showWrsTemplate = require('../templates/wrs.handlebars')
 const showTesTemplate = require('../templates/tes.handlebars')
 const showKsTemplate = require('../templates/ks.handlebars')
+const showDstsTemplate = require('../templates/dsts.handlebars')
 
 // ************** QB onSuccess/failure ****************
 const getQbsSuccess = (data) => {
@@ -66,6 +67,18 @@ const getKsSuccess = (data) => {
 const getKsFailure = (error) => {
   console.log(error)
 }
+// ************** DST(Def team) onSuccess/failure ****************
+const getDstsSuccess = (data) => {
+  console.log(data)
+  const showDstsHTML = showDstsTemplate({
+    dsts: data.dsts
+  })
+  $('.DST').append(showDstsHTML)
+}
+
+const getDstsFailure = (error) => {
+  console.log(error)
+}
 
 module.exports = {
   getQbsSuccess,
@@ -77,5 +90,7 @@ module.exports = {
   getTesSuccess,
   getTesFailure,
   getKsSuccess,
-  getKsFailure
+  getKsFailure,
+  getDstsSuccess,
+  getDstsFailure
 }
