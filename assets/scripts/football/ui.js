@@ -6,6 +6,7 @@ const showWrsTemplate = require('../templates/wrs.handlebars')
 const showTesTemplate = require('../templates/tes.handlebars')
 const showKsTemplate = require('../templates/ks.handlebars')
 const showDstsTemplate = require('../templates/dsts.handlebars')
+const showDraftsTemplate = require('../templates/drafts.handlebars')
 
 // ************** QB onSuccess/failure ****************
 const getQbsSuccess = (data) => {
@@ -79,6 +80,36 @@ const getDstsSuccess = (data) => {
 const getDstsFailure = (error) => {
   console.log(error)
 }
+// ************ DRAFT LIST *******************************
+// ************** Draft create onSuccess/failure ****************
+const onCreateDraftSuccess = (data) => {
+  console.log()
+}
+
+const onCreateDraftFailure = (data) => {
+  console.log(error)
+}
+// ************** Draft GET onSuccess/failure ****************
+const onGetDraftsSuccess = (data) => {
+  console.log(data)
+  const showDraftsHTML = showDraftsTemplate({
+    drafts: data.drafts
+  })
+  $('.DRAFT').append(showDraftsHTML)
+}
+
+const onGetDraftsFailure = (data) => {
+  console.log('fuck off and login')
+}
+// ************** Draft Delete onSuccess/failure ****************
+const onDeleteDraftSuccess = (data) => {
+  console.log()
+}
+
+const onDeleteDraftFailure = (data) => {
+  console.log('data')
+}
+// ************** Draft patch onSuccess/failure ****************
 
 module.exports = {
   getQbsSuccess,
@@ -92,5 +123,11 @@ module.exports = {
   getKsSuccess,
   getKsFailure,
   getDstsSuccess,
-  getDstsFailure
+  getDstsFailure,
+  onCreateDraftSuccess,
+  onCreateDraftFailure,
+  onGetDraftsSuccess,
+  onGetDraftsFailure,
+  onDeleteDraftSuccess,
+  onDeleteDraftFailure
 }

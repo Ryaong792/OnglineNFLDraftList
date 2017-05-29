@@ -1,5 +1,6 @@
 'use strict'
 const config = require('../config')
+const store = require('../store')
 
 // ************* QB Get request API *******************
 const indexQbs = (id) => {
@@ -43,6 +44,38 @@ const indexDsts = (id) => {
     method: 'GET'
   })
 }
+// ***************** Draft List ***************************
+// ***************** Draft create *************************
+const create = (data) => {
+  return $.ajax({
+    url: config.apiOrigin + '/drafts',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+// ***************** Draft GET *************************
+const indexDrafts = (id) => {
+  return $.ajax({
+    url: config.apiOrigin + '/drafts',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+// ***************** Draft Delete *************************
+const destoryDraft = (id) => {
+  return $.ajax({
+    url: config.apiOrigin + '/drafts/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 
 module.exports = {
   indexQbs,
@@ -50,5 +83,8 @@ module.exports = {
   indexWrs,
   indexTes,
   indexKs,
-  indexDsts
+  indexDsts,
+  indexDrafts,
+  create,
+  destoryDraft
 }

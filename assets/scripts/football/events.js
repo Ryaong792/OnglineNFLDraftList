@@ -1,5 +1,5 @@
 'use strict'
-
+const getFormFields = require('../../../lib/get-form-fields')
 const footApi = require('./api.js')
 const footUi = require('./ui.js')
 
@@ -45,6 +45,29 @@ const getDsts = function (event) {
   .then(footUi.getDstsSuccess)
   .catch(footUi.getDstsFailure)
 }
+// ************** Draft List *************************************
+// ************** Draft Creation *********************************
+const createDraft = function () {
+  event.preventDefault()
+  const data = getFormFields(this)
+  footApi.create(data)
+      .then(footUi.onCreateDraftSuccess)
+      .catch(footUi.onCreateDraftFailure)
+}
+// ************* DRAFT GET ***************************************
+const getDraft = function (event) {
+  footApi.indexDrafts()
+  .then(footUi.onGetDraftsSuccess)
+  .catch(footUi.onGetDraftsFailure)
+}
+// ************* Draft Delete ************************************
+const deleteDraft = function () {
+  const id = $(this).attr('data-id')
+  console.log($(this).attr('data-id'))
+  footApi.destoryDraft(id)
+  .then(footUi.onDeleteCartSuccess)
+  .catch(footUi.onDeleteCartFailure)
+}
 
 const addHandlers = () => {
   $('.QBS').on('click', getQbs)
@@ -53,6 +76,10 @@ const addHandlers = () => {
   $('.TES').on('click', getTes)
   $('.KS').on('click', getKs)
   $('.DST').on('click', getDsts)
+  $('#createDraft').on('submit', createDraft)
+  $('.DRAFTS').on('click', getDraft)
+  $('.deleteDraft').on('click', deleteDraft)
+  $('.DRAFT').on('click', '.deleteDraft', deleteDraft)
 }
 
 module.exports = {
@@ -60,5 +87,8 @@ module.exports = {
   getRbs,
   getWrs,
   getKs,
+  createDraft,
+  getDraft,
+  deleteDraft,
   addHandlers
 }

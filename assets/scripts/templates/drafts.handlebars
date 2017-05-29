@@ -1,0 +1,7 @@
+{{#each drafts as |draft|}}
+<ul>
+<li>{{draft.name}}</li>
+<li>{{draft._id}}</li>
+<button class="btn btn-sm deleteDraft {{draft._id}}" id="deleteDraft" data-id="{{draft._id}}" type"submit">delete</button>
+</ul>
+{{/each}}
