@@ -1,5 +1,5 @@
 'use strict'
-// const store = require('../store')
+const store = require('../store')
 const showQbsTemplate = require('../templates/qbs.handlebars')
 const showRbsTemplate = require('../templates/rbs.handlebars')
 const showWrsTemplate = require('../templates/wrs.handlebars')
@@ -12,7 +12,8 @@ const showDraftsTemplate = require('../templates/drafts.handlebars')
 const getQbsSuccess = (data) => {
   console.log(data)
   const showQbsHTML = showQbsTemplate({
-    qbs: data.qbs
+    qbs: data.qbs,
+    user: store.user.email
   })
   $('.QB').append(showQbsHTML)
 }
@@ -24,7 +25,8 @@ const getQbsFailure = (error) => {
 const getRbsSuccess = (data) => {
   console.log(data)
   const showRbsHTML = showRbsTemplate({
-    rbs: data.rbs
+    rbs: data.rbs,
+    user: store.user.email
   })
   $('.RB').append(showRbsHTML)
 }
@@ -36,7 +38,8 @@ const getRbsFailure = (error) => {
 const getWrsSuccess = (data) => {
   console.log(data)
   const showWrsHTML = showWrsTemplate({
-    wrs: data.wrs
+    wrs: data.wrs,
+    user: store.user.email
   })
   $('.WR').append(showWrsHTML)
 }
@@ -48,7 +51,8 @@ const getWrsFailure = (error) => {
 const getTesSuccess = (data) => {
   console.log(data)
   const showTesHTML = showTesTemplate({
-    tes: data.tes
+    tes: data.tes,
+    user: store.user.email
   })
   $('.TE').append(showTesHTML)
 }
@@ -60,7 +64,8 @@ const getTesFailure = (error) => {
 const getKsSuccess = (data) => {
   console.log(data)
   const showKsHTML = showKsTemplate({
-    ks: data.ks
+    ks: data.ks,
+    user: store.user.email
   })
   $('.K').append(showKsHTML)
 }
@@ -72,7 +77,8 @@ const getKsFailure = (error) => {
 const getDstsSuccess = (data) => {
   console.log(data)
   const showDstsHTML = showDstsTemplate({
-    dsts: data.dsts
+    dsts: data.dsts,
+    user: store.user.email
   })
   $('.DST').append(showDstsHTML)
 }
@@ -83,11 +89,12 @@ const getDstsFailure = (error) => {
 // ************ DRAFT LIST *******************************
 // ************** Draft create onSuccess/failure ****************
 const onCreateDraftSuccess = (data) => {
-  console.log()
+  store.draft = data.draft
+  console.log(data.draft)
 }
 
 const onCreateDraftFailure = (data) => {
-  console.log(error)
+  console.log()
 }
 // ************** Draft GET onSuccess/failure ****************
 const onGetDraftsSuccess = (data) => {
@@ -111,6 +118,13 @@ const onDeleteDraftFailure = (data) => {
 }
 // ************** Draft patch onSuccess/failure ****************
 
+const onAddToDraftSuccess = () => {
+  console.log('great')
+}
+const onAddToDraftFailure = () => {
+  console.log('fuck')
+}
+
 module.exports = {
   getQbsSuccess,
   getQbsFailure,
@@ -129,5 +143,7 @@ module.exports = {
   onGetDraftsSuccess,
   onGetDraftsFailure,
   onDeleteDraftSuccess,
-  onDeleteDraftFailure
+  onDeleteDraftFailure,
+  onAddToDraftSuccess,
+  onAddToDraftFailure
 }

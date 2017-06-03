@@ -77,6 +77,18 @@ const destoryDraft = (id) => {
   })
 }
 
+// ***************** Draft Delete *************************
+const updateNotes = (data) => {
+  return $.ajax({
+    url: config.apiOrigin + '/drafts/',
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   indexQbs,
   indexRbs,
@@ -86,5 +98,6 @@ module.exports = {
   indexDsts,
   indexDrafts,
   create,
-  destoryDraft
+  destoryDraft,
+  updateNotes
 }

@@ -13,5 +13,16 @@
     <li>{{qb.miscFL}}</li>
     <li>{{qb.miscFPTS}}</li>
   </ul>
+  <div>
+    <form id='createDraft'>
+      <input type='hidden' name="draft[playerid]" value="{{../user}}{{qb._id}}"/>
+      <input type='hidden' name="draft[name]" value="{{qb.player}}"/>
+      <input type='hidden' name="draft[position]" value="QB"/>
+      <input type='hidden' name="draft[image]" value="{{qb.image}}"/>
+      <input type='hidden' name="draft[rank]" value="{{qb.rank}}"/>
+      <input type='hidden' name="draft[miscFPTS]" value="{{qb.miscFPTS}}"/>
+      <input type="submit"/>
+    </form>
+  </div>
 <hr/>
 {{/each}}

@@ -12,4 +12,15 @@
 <li>{{dst.ydsAGN}}</li>
 <li>{{dst.miscFPTS}}</li>
 </ul>
+<div>
+  <form id='createDraft'>
+    <input type='hidden' name="draft[playerid]" value="{{../user}}{{dst._id}}"/>
+    <input type='hidden' name="draft[name]" value="{{dst.player}}"/>
+    <input type='hidden' name="draft[position]" value="DST"/>
+    <input type='hidden' name="draft[image]" value="{{dst.image}}"/>
+    <input type='hidden' name="draft[rank]" value="{{dst.rank}}"/>
+    <input type='hidden' name="draft[miscFPTS]" value="{{dst.miscFPTS}}"/>
+    <input type="submit"/>
+  </form>
+</div>
 {{/each}}

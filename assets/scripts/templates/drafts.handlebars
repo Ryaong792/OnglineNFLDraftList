@@ -1,7 +1,16 @@
 {{#each drafts as |draft|}}
 <ul>
 <li>{{draft.name}}</li>
-<li>{{draft._id}}</li>
-<button class="btn btn-sm deleteDraft {{draft._id}}" id="deleteDraft" data-id="{{draft._id}}" type"submit">delete</button>
+<li>{{draft.image}}</li>
+<li>{{draft.position}}</li>
+<li>{{draft.rank}}</li>
+<li>{{draft.miscFPTS}}</li>
+<li>{{draft.notes}}</li>
 </ul>
+<div>
+  <form id='updateNotes'>
+    <input data-id="{{draft._id}}" type='text' name="draft[notes]"/>
+    <input data-id="{{draft._id}}" type="submit"/>
+  </form>
+</div>
 {{/each}}

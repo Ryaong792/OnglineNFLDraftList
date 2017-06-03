@@ -8,4 +8,15 @@
 <li>{{k.extraPT}}</li>
 <li>{{k.miscFPTS}}</li>
 </ul>
+<div>
+  <form id='createDraft'>
+    <input type='hidden' name="draft[playerid]" value="{{../user}}{{k._id}}"/>
+    <input type='hidden' name="draft[name]" value="{{k.player}}"/>
+    <input type='hidden' name="draft[position]" value="K"/>
+    <input type='hidden' name="draft[image]" value="{{k.image}}"/>
+    <input type='hidden' name="draft[rank]" value="{{k.rank}}"/>
+    <input type='hidden' name="draft[miscFPTS]" value="{{k.miscFPTS}}"/>
+    <input type="submit"/>
+  </form>
+</div>
 {{/each}}

@@ -13,4 +13,14 @@
 <li>{{wr.miscFL}}</li>
 <li>{{wr.miscFPTS}}</li>
 </ul>
+<form id='createDraft'>
+  <input type='hidden' name="draft[playerid]" value="{{../user}}{{wrs._id}}"/>
+  <input type='hidden' name="draft[name]" value="{{wrs.player}}"/>
+  <input type='hidden' name="draft[position]" value="DST"/>
+  <input type='hidden' name="draft[image]" value="{{wrs.image}}"/>
+  <input type='hidden' name="draft[rank]" value="{{wrs.rank}}"/>
+  <input type='hidden' name="draft[miscFPTS]" value="{{wrs.miscFPTS}}"/>
+  <input type="submit"/>
+</form>
+</div>
 {{/each}}

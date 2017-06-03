@@ -9,4 +9,14 @@
 <li>{{te.miscFL}}</li>
 <li>{{te.miscFPTS}}</li>
 </ul>
+<form id='createDraft'>
+  <input type='hidden' name="draft[playerid]" value="{{../user}}{{te._id}}"/>
+  <input type='hidden' name="draft[name]" value="{{te.player}}"/>
+  <input type='hidden' name="draft[position]" value="TE"/>
+  <input type='hidden' name="draft[image]" value="{{te.image}}"/>
+  <input type='hidden' name="draft[rank]" value="{{te.rank}}"/>
+  <input type='hidden' name="draft[miscFPTS]" value="{{te.miscFPTS}}"/>
+  <input type="submit"/>
+</form>
+</div>
 {{/each}}
