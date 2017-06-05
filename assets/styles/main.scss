@@ -279,9 +279,13 @@ left: calc(50% - 110px);
 
 /* ================ Ranking Section ================ */
 #section-ranking {
-  min-height: 500px;
+  min-height: 600px;
   position: relative;
   margin-top: auto;
 	background-color: #f9f9f9;
   overflow: auto;
+  text-align: center;
+}
+.Ranking {
+  font-family: 'Bangers', cursive;
 }
