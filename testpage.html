@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags unless you know what you are doing -->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags unless you know what you are doing -->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+
+
+<div class="password">
+  <h1>Password Area</h1>
+<div>
+  <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="sign-in">
+                        <div class="form-group">
+                          <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                          <input type="email" name="credentials[email]" class="form-control" placeholder="Email address" required>
+                        </div>
+                        <div class="form-group">
+                          <label class="sr-only" for="exampleInputPassword2">Password</label>
+                          <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                          <button type="submit" class="btn btn-primary btn-block">Sign-In</button>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="bottom text-center">
+                      Dont have an account? <a href="#" class="linkSignUp"><b>Sign-Up</b></a>
+                    </div>
+                  </div>
+
+
+                  <div class="row sign-up">
+                    <div class="col-md-12">
+                      <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="sign-up">
+                        <div class="form-group">
+                          <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                          <input type="email" name="credentials[email]" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                        </div>
+                        <div class="form-group">
+                          <label class="sr-only" for="exampleInputPassword2">Password</label>
+                          <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                          <label class="sr-only" for="exampleInputPassword2">Confirm Password</label>
+                          <input type="password" name="credentials[password_confirmation]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                          <button type="submit" class="btn btn-primary btn-block">Sign-Up</button>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="bottom text-center">
+                      Already have an account? <a href="#" class="linkSignIn"><b>Sign-In</b></a>
+                    </div>
+                  </div>
+
+
+                      <div class="row change-password">
+                        <div class="col-md-12">
+                          <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="change-password">
+                            <div class="form-group">
+                              <label class="sr-only" for="exampleInputPassword2">Old Password</label>
+                              <input type="password" name="passwords[old]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                              <label class="sr-only" for="exampleInputPassword2">New Password</label>
+                              <input type="password" name="passwords[new]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                              <button type="submit" class="btn btn-primary btn-block">change-password</button>
+                            </div>
+                          </form>
+                        </div>
+
+
+                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="sign-out">
+  <button type="submit" class="btn btn-primary btn-block">Sign Out</button>
+</form>
+</div>
+<!-- ********************** end of password *********************-->
+
+
+
+<div class="QB">
+  <button class="btn btn-sm QBS">QB</button>
+</div>
+
+<div class="RB">
+  <button class="btn btn-sm RBS">RB</button>
+</div>
+
+
+<div class="WR">
+  <button class="btn btn-sm WRS">WR</button>
+</div>
+
+<div class="TE">
+  <button class="btn btn-sm TES">TES</button>
+</div>
+
+<div class="K">
+  <button class="btn btn-sm KS">Kickers</button>
+</div>
+
+<div class="DST">
+  <button class="btn btn-sm DSTS">Defense Team</button>
+</div>
+
+
+<div class="draft">
+  <form id='createDraft'>
+    <input type='text' name="draft[name]" value='dfdfdf'/>
+    <input type="submit"/>
+  </form>
+</div>
+
+<div class="DRAFT">
+  <button class="btn btn-sm DRAFTS">Drafts</button>
+  <div id="drafts">
+  </div>
+</div>
+
+</html>

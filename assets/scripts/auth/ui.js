@@ -10,16 +10,24 @@ const signUpFailure = () => {
 }
 const signInSuccess = (data) => {
   store.user = data.user
-  console.log('great success!')
+  $('#sign-in').trigger('reset')
+  $('.sign-in').hide()
+  $('.sign-out').show()
+  $('.dropdown-menu').trigger('click')
+  $('#welcome').modal('show')
 }
 
 const signInFailure = () => {
-  console.log('great failure!')
+  $('#sign-in').trigger('reset')
+  $('#signInFailure').modal('show')
+  $('.dropdown-menu').trigger('click')
 }
 
 const signOutSuccess = (data) => {
   store.user = {}
-  console.log('great success!')
+  $('.sign-in').show()
+  $('.sign-out').hide()
+  $('#signOut').modal('show')
 }
 
 const signOutFailure = () => {

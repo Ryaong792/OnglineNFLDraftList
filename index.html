@@ -1,93 +1,295 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>OnglineNFLDraftList</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags unless you know what you are doing -->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Bangers"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
       <!-- Do not add `script` tags unless you know what you are doing -->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body class="container-fluid">
+    <body>
+      <div class="carousel slide carousel-fade" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+        <div class="item active"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        </div>
+      </div>
+<!-- end of background images -->
 
+<!--=== Header section Starts ===-->
+<div id="header" class="header-section">
+  <!-- sticky-bar Starts-->
+  <div class="sticky-bar-wrap">
+    <div class="sticky-section">
+      <div id="topbar-hold" class="nav-hold container">
+        <nav class="navbar" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--=== Site Name ===-->
+            <a class="site-name navbar-brand" href="#"><span class="logo">O</span>ngline NFL Draft List</a>
+          </div>
 
-<div class="password">
-  <h1>Password Area</h1>
-<div>
-  <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="sign-in">
-                        <div class="form-group">
-                          <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                          <input type="email" name="credentials[email]" class="form-control" placeholder="Email address" required>
-                        </div>
-                        <div class="form-group">
-                          <label class="sr-only" for="exampleInputPassword2">Password</label>
-                          <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                        </div>
-                        <div class="form-group">
-                          <button type="submit" class="btn btn-primary btn-block">Sign-In</button>
-                        </div>
-                      </form>
+          <!-- Main Navigation menu Starts -->
+          <div class="collapse navbar-collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="current"><a href="#header">Home</a></li>
+              <li><a href="#section-feature">Rankings</a></li>
+              <li><a href="#section-services">test</a></li>
+              <li><a href="#step-1">test</a></li>
+              <li><a href="#section-screenshots">About</a></li>
+              <li><a href="#section-pricing">Projects</a></li>
+              <li>
+                <!-- ***** start of login / sign-up drop down in NAV **** -->
+                        <ul class="nav navbar-nav">
+                          <li class="dropdown account">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Account</b> <span class="caret"></span></a>
+                            <ul id="login-dp" class="dropdown-menu">
+                              <li>
+                                <div class="row sign-in">
+                                  <div class="col-md-12">
+                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="sign-in">
+                                      <div class="form-group">
+                                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                        <input type="email" name="credentials[email]" class="form-control" placeholder="Email address" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                        <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block">Sign-In</button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="bottom text-center">
+                                    Dont have an account? <a href="#" class="linkSignUp"><b>Sign-Up</b></a>
+                                  </div>
+                                </div>
+                                <!-- END of SIGN-IN -->
+                                <!-- Start of Sign-UP -->
+                                <div class="row sign-up">
+                                  <div class="col-md-12">
+                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="sign-up">
+                                      <div class="form-group">
+                                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                        <input type="email" name="credentials[email]" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                        <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <label class="sr-only" for="exampleInputPassword2">Confirm Password</label>
+                                        <input type="password" name="credentials[password_confirmation]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block">Sign-Up</button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="bottom text-center">
+                                    Already have an account? <a href="#" class="linkSignIn"><b>Sign-In</b></a>
+                                  </div>
+                                </div>
+                                <!-- End of Sign-up -->
+                                <!-- start of Singout -->
+                                <div class="row sign-out">
+                                  <div class="col-md-12">
+                                    <div class="bottom text-center">
+                                      <button type="button" class="linkChangePassword btn btn-primary btn-block">Change Password</button>
+                                    </div>
+                                    <div class="bottom text-center">
+                                      <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="sign-out">
+                                        <button type="submit" class="btn btn-primary btn-block">Sign Out</button>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- end of Sign-out -->
+                                <!-- Start of change password -->
+                                <div class="row change-password">
+                                  <div class="col-md-12">
+                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="change-password">
+                                      <div class="form-group">
+                                        <label class="sr-only" for="exampleInputPassword2">Old Password</label>
+                                        <input type="password" name="passwords[old]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <label class="sr-only" for="exampleInputPassword2">New Password</label>
+                                        <input type="password" name="passwords[new]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block">change-password</button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="bottom text-center">
+                                    Want to go back? <a href="#" class="linkAccount"><b>Account Menu</b></a>
+                                  </div>
+                                </div>
+                                <!-- End of change password -->
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      </ul>
+                        <!-- /.navbar-collapse -->
+                      </div>
                     </div>
-                    <div class="bottom text-center">
-                      Dont have an account? <a href="#" class="linkSignUp"><b>Sign-Up</b></a>
-                    </div>
-                  </div>
+                    <!-- end of DIV container -->
+                  <!-- END OF NAV BAR -->
+          </div>
+          <!-- Main Navigation menu ends-->
+      </div>
+    </div>
+  <!-- sticky-bar Ends-->
+  <!--=== Header section Ends ===-->
+  <!-- ERROR MESSAGES -->
+
+  <div id="signUpSuccess" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-success">
+          <h4>Sign-Up has been completed!</h4>
+          <p>Your acount has been created successfully. Please sign-in to begin shopping!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="signUpFailure" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-danger alert-dismissible text-center" role="alert">
+          <h4>Sign-Up was unsuccessful!</h4>
+          <p>Either your email account is already in used or your password does not match. Please try again!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="chgPswdSuccess" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-success">
+          <h4>Password Change Successfully!</h4>
+          <p>Change password performed successfully. Please remember to use new password!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="chgPswdFailure" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-danger alert-dismissible text-center" role="alert">
+          <h4>Password Change Failed!</h4>
+          <p>The Old Password you enter incorrect. Please try again!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="signInFailure" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-danger alert-dismissible text-center" role="alert">
+          <h4>Sign-In Failed!</h4>
+          <p>Either your email or password is incorrect. Please try again!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="welcome" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-success alert-dismissible text-center" role="alert">
+          <h4>Welcome!</h4>
+          <p>Enjoy your NFL Draft list experience!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="signOut" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-success alert-dismissible text-center" role="alert">
+          <h4>Signed Out</h4>
+          <p>You are now signed out. Have a good day!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of error messages -->
+
+  <!--=== Home Section Starts ===-->
+  <div id="section-home" class="home-section-wrap center">
+    <div class="section-overlay"></div>
+    <div class="container home">
+      <div class="row">
+        <h1 class="well-come">Weclome</h1>
+
+        <div class="col-md-8 col-md-offset-2">
+          <p class="intro-message">Be prepared with Ongline NFL Draft List!</p>
 
 
-                  <div class="row sign-up">
-                    <div class="col-md-12">
-                      <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="sign-up">
-                        <div class="form-group">
-                          <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                          <input type="email" name="credentials[email]" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-                        </div>
-                        <div class="form-group">
-                          <label class="sr-only" for="exampleInputPassword2">Password</label>
-                          <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                        </div>
-                        <div class="form-group">
-                          <label class="sr-only" for="exampleInputPassword2">Confirm Password</label>
-                          <input type="password" name="credentials[password_confirmation]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                        </div>
-                        <div class="form-group">
-                          <button type="submit" class="btn btn-primary btn-block">Sign-Up</button>
-                        </div>
-                      </form>
-                    </div>
-                    <div class="bottom text-center">
-                      Already have an account? <a href="#" class="linkSignIn"><b>Sign-In</b></a>
-                    </div>
-                  </div>
-
-
-                      <div class="row change-password">
-                        <div class="col-md-12">
-                          <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="change-password">
-                            <div class="form-group">
-                              <label class="sr-only" for="exampleInputPassword2">Old Password</label>
-                              <input type="password" name="passwords[old]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                            </div>
-                            <div class="form-group">
-                              <label class="sr-only" for="exampleInputPassword2">New Password</label>
-                              <input type="password" name="passwords[new]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                            </div>
-                            <div class="form-group">
-                              <button type="submit" class="btn btn-primary btn-block">change-password</button>
-                            </div>
-                          </form>
-                        </div>
-
-
-                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="sign-out">
-  <button type="submit" class="btn btn-primary btn-block">Sign Out</button>
-</form>
+            <button class"btn btnSignIn">
+              Sign-in
+              <span class="glyphicon glyphicon-user">
+              </span>
+            </button>
+            <button class"btn btnRegister tester2">
+              Register!
+              <span class="glyphicon glyphicon-asterisk">
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=== Home Section Ends ===-->
 </div>
-<!-- ********************** end of password *********************-->
+
+<!--=== Features section Starts ===-->
+	<section id="section-feature" class="feature-wrap">
+		<div class="container features center">
+			<div class="row">
+				<div class="col-lg-12">
+						<!--Features container Starts -->
+						<ul id="card-ul" class="features-hold baraja-container">
+
+							<!-- Single Feature Starts -->
+							<li class="single-feature" title="Card style">
+								<h4 class="feature-title color-scheme">Card style</h4>
+								<p class="feature-text">
+									Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut.
+								</p>
+
+									<a href="#" class="fancy-button button-line btn-col small vertical">
+										Details
+									</a>
+
+							</li>
+							<!-- Single Feature Ends -->
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--=== Features section Ends ===-->
 
 
+<!-- test area for drafts and list -->
 
 <div class="QB">
   <button class="btn btn-sm QBS">QB</button>
@@ -128,4 +330,11 @@
   </div>
 </div>
 
+
+
+
+
+
+
+</body>
 </html>
