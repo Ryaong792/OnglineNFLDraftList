@@ -13,7 +13,7 @@
 
 
 const addHandlers = () => {
-$('.carousel').carousel();
+  $('.carousel').carousel()
 }
 
 
@@ -22,5 +22,6 @@ $('.carousel').carousel();
 
 
 module.exports = {
+  addHandlers
 
 }
