@@ -21,7 +21,7 @@ input:focus, textarea:focus {
 	outline: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h5, h6 {
 	font-family: 'Raleway', sans-serif;
 	text-transform:capitalize;
 	letter-spacing: 1px;
@@ -141,6 +141,8 @@ font-weight: 700;
 
 .section-overlay {
 	background: rgba(0, 0, 0, .7) !important;
+  min-height: 700px;
+  max-height: 71%;
 	z-index: 5;
 }
 
@@ -229,12 +231,14 @@ color:#ccc !important;
 
 
 .section-home {
-	position:relative;
-  width: 5000px;
+	position:fixed;
+  overflow: auto;
+  clear:both
 }
 
 .home {
-	min-height: 600px;
+	min-height: 700px;
+  overflow: auto;
 }
 
 .well-come {
@@ -273,9 +277,11 @@ left: calc(50% - 110px);
 }
 
 
-/* ================ Features Section ================ */
-#section-feature {
-  margin-top: 12.3%;
+/* ================ Ranking Section ================ */
+#section-ranking {
+  min-height: 500px;
+  position: relative;
+  margin-top: auto;
 	background-color: #f9f9f9;
-  overflow: inherit;
+  overflow: auto;
 }
