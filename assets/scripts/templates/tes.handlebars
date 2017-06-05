@@ -1,22 +1,29 @@
 {{#each tes as |te|}}
-<ul>
-<li>{{te.player}}</li>
-<li>{{te.image}}</li>
-<li>{{te.rank}}</li>
-<li>{{te.receivingREC}}</li>
-<li>{{te.receivingYDS}}</li>
-<li>{{te.receivingTDS}}</li>
-<li>{{te.miscFL}}</li>
-<li>{{te.miscFPTS}}</li>
-</ul>
-<form id='createDraft'>
-  <input type='hidden' name="draft[playerid]" value="{{../user}}{{te._id}}"/>
-  <input type='hidden' name="draft[name]" value="{{te.player}}"/>
-  <input type='hidden' name="draft[position]" value="TE"/>
-  <input type='hidden' name="draft[image]" value="{{te.image}}"/>
-  <input type='hidden' name="draft[rank]" value="{{te.rank}}"/>
-  <input type='hidden' name="draft[miscFPTS]" value="{{te.miscFPTS}}"/>
-  <input type="submit"/>
-</form>
-</div>
+<tr>
+<td class="imagetable"><img src="{{te.image}}"/></td>
+<td class="tablerk">{{te.player}}</td>
+<td class="tablerk">{{te.rank}}</td>
+<td class="tablerk">{{te.receivingREC}}</td>
+<td class="tablerk">{{te.receivingYDS}}</td>
+<td class="tablerk">{{te.receivingTDS}}</td>
+<td class="tablerk">{{te.miscFL}}</td>
+<td class="tablerk">{{te.miscFPTS}}</td>
+
+<td>
+  <div>
+    <form id='createDraft'>
+      <input type='hidden' name="draft[playerid]" value="{{../user}}{{te._id}}"/>
+      <input type='hidden' name="draft[name]" value="{{te.player}}"/>
+      <input type='hidden' name="draft[position]" value="TE"/>
+      <input type='hidden' name="draft[image]" value="{{te.image}}"/>
+      <input type='hidden' name="draft[rank]" value="{{te.rank}}"/>
+      <input type='hidden' name="draft[miscFPTS]" value="{{te.miscFPTS}}"/>
+      <input type='hidden' name="draft[notes]" value="N/A"/>
+      <button class="btn btn-sm" type="submit">
+         Draft
+      </button>
+    </form>
+  </div>
+</td>
+</tr>
 {{/each}}
