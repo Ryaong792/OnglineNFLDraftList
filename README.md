@@ -4,7 +4,7 @@
 
 
 
-![Wireframe](/WireFrame.png)
+![Wireframe](/WireFrame.jpg)
 
 
 Users will need to log-in to view Draft ranks
