@@ -80,6 +80,7 @@ const addToNotes = function (data) {
   // .catch(footUi.onAddToDraftFailure)
 }
 
+
 const addHandlers = () => {
   $('.QBS').on('click', getQbs)
   $('.RBS').on('click', getRbs)

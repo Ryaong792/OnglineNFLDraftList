@@ -15,7 +15,8 @@ const getQbsSuccess = (data) => {
     qbs: data.qbs,
     user: store.user.email
   })
-  $('.QB').append(showQbsHTML)
+  $('.QB').html(showQbsHTML)
+  // $('#section-ranking').hide()
 }
 
 const getQbsFailure = (error) => {
@@ -28,7 +29,7 @@ const getRbsSuccess = (data) => {
     rbs: data.rbs,
     user: store.user.email
   })
-  $('.RB').append(showRbsHTML)
+  $('.RB').html(showRbsHTML)
 }
 
 const getRbsFailure = (error) => {
@@ -124,6 +125,7 @@ const onAddToDraftSuccess = () => {
 const onAddToDraftFailure = () => {
   console.log('fuck')
 }
+// ************** hide on success *********************
 
 module.exports = {
   getQbsSuccess,

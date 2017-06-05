@@ -289,3 +289,14 @@ left: calc(50% - 110px);
 .Ranking {
   font-family: 'Bangers', cursive;
 }
+
+/* ================ Ranking  handlebars Section ================ */
+
+#section-handlebars {
+  min-height: 600px;
+  position: relative;
+  margin-top: auto;
+	background-color: #f9f9f9;
+  overflow: auto;
+  text-align: center;
+}
