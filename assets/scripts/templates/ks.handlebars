@@ -1,22 +1,27 @@
 {{#each ks as |k|}}
-<ul>
-<li>{{k.player}}</li>
-<li>{{k.image}}</li>
-<li>{{k.rank}}</li>
-<li>{{k.fieldG}}</li>
-<li>{{k.fieldGA}}</li>
-<li>{{k.extraPT}}</li>
-<li>{{k.miscFPTS}}</li>
-</ul>
-<div>
-  <form id='createDraft'>
-    <input type='hidden' name="draft[playerid]" value="{{../user}}{{k._id}}"/>
-    <input type='hidden' name="draft[name]" value="{{k.player}}"/>
-    <input type='hidden' name="draft[position]" value="K"/>
-    <input type='hidden' name="draft[image]" value="{{k.image}}"/>
-    <input type='hidden' name="draft[rank]" value="{{k.rank}}"/>
-    <input type='hidden' name="draft[miscFPTS]" value="{{k.miscFPTS}}"/>
-    <input type="submit"/>
-  </form>
-</div>
+<tr>
+<td class="imagetablek"><img src="{{k.image}}"/></td>
+<td class="tablerk">{{k.player}}</td>
+<td class="tablerk">{{k.rank}}</td>
+<td class="tablerk">{{k.fieldG}}</td>
+<td class="tablerk">{{k.fieldGA}}</td>
+<td class="tablerk">{{k.extraPT}}</td>
+<td class="tablerk">{{k.miscFPTS}}</td>
+<td>
+  <div>
+    <form id='createDraft'>
+      <input type='hidden' name="draft[playerid]" value="{{../user}}{{k._id}}"/>
+      <input type='hidden' name="draft[name]" value="{{k.player}}"/>
+      <input type='hidden' name="draft[position]" value="K"/>
+      <input type='hidden' name="draft[image]" value="{{k.image}}"/>
+      <input type='hidden' name="draft[rank]" value="{{k.rank}}"/>
+      <input type='hidden' name="draft[miscFPTS]" value="{{k.miscFPTS}}"/>
+      <input type='hidden' name="draft[notes]" value="N/A"/>
+      <button class="btn btn-sm" type="submit">
+         Draft
+      </button>
+    </form>
+  </div>
+</td>
+</tr>
 {{/each}}

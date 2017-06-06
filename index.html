@@ -310,7 +310,7 @@
                   <img src="https://s3.amazonaws.com/ryaong792/Kicker.jpg" />
                   </div>
                   <p><h3>Kicker</h3> <br/>Fantasy Ranking <br/>1-36</p>
-                  <button class="btn btnSignIn btn-default">
+                  <button class="btn btnSignIn btn-default KS">
                      Draft Ranking
                     <span class="glyphicon glyphicon-list"></span>
                   </button>
@@ -321,7 +321,7 @@
                     <img src="https://s3.amazonaws.com/ryaong792/DST.jpg"/>
                     </div>
                     <p><h3>Defensive Team</h3> <br/>Fantasy Ranking <br/>1-32</p>
-                    <button class="btn btnSignIn btn-default">
+                    <button class="btn btnSignIn btn-default DSTS">
                        Draft Ranking
                       <span class="glyphicon glyphicon-list"></span>
                     </button>
@@ -333,7 +333,7 @@
   	<section id="section-handlebars" class="handlebars-wrap">
 
 <!-- **************** QB Handlebars Table list ************************** -->
-<h3 class="Ranking">Quarterback Rankings 2017</h3>
+<h3 class="Ranking">Quarterback's Rankings 2017</h3>
       <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
         <thead>
           <tr>
@@ -356,7 +356,7 @@
         </tbody>
         </table>
 <!-- **************** RB Handlebars Table list ************************** -->
-    <h3 class="Ranking">Running-Backs Rankings 2017</h3>
+    <h3 class="Ranking">Running-Back's Rankings 2017</h3>
     <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
       <thead>
         <tr>
@@ -378,7 +378,7 @@
       </tbody>
       </table>
 <!-- **************** WR Handlebars Table list ************************** -->
-      <h3 class="Ranking">Wide-Receivers Rankings 2017</h3>
+      <h3 class="Ranking">Wide-Receiver's Rankings 2017</h3>
       <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
         <thead>
           <tr>
@@ -400,7 +400,7 @@
         </tbody>
         </table>
 <!-- **************** TE Handlebars Table list ************************** -->
-<h3 class="Ranking">Tight-Ends Rankings 2017</h3>
+<h3 class="Ranking">Tight-End's Rankings 2017</h3>
 <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
   <thead>
     <tr>
@@ -418,8 +418,63 @@
   <tbody class="TE">
   </tbody>
   </table>
-
-
+  <!-- **************** Kickers Handlebars Table list ************************** -->
+  <h3 class="Ranking">Kicker's Rankings 2017</h3>
+  <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
+    <thead>
+      <tr>
+        <th class="tablerk">Image</th>
+        <th class="tablerk">Name</th>
+        <th class="tablerk">Rank</th>
+        <th class="tablerk">FieldG</th>
+        <th class="tablerk">FieldGA</th>
+        <th class="tablerk">ExtraPT</th>
+        <th class="tablerk">miscFPTS</th>
+        <th class="tablerk">Draft</th>
+      </tr>
+    </thead>
+    <tbody class="K">
+    </tbody>
+    </table>
+  <!-- **************** Def Team Handlebars Table list ************************** -->
+  <h3 class="Ranking">Defensive Team's Rankings 2017</h3>
+  <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
+    <thead>
+      <tr>
+        <th class="tablerk">Image</th>
+        <th class="tablerk">Name</th>
+        <th class="tablerk">Rank</th>
+        <th class="tablerk">Sacks</th>
+        <th class="tablerk">Int</th>
+        <th class="tablerk">FR</th>
+        <th class="tablerk">FF</th>
+        <th class="tablerk">Assist</th>
+        <th class="tablerk">Safety</th>
+        <th class="tablerk">YdsAGN</th>
+        <th class="tablerk">miscFPTS</th>
+        <th class="tablerk">Draft</th>
+      </tr>
+    </thead>
+    <tbody class="DST">
+    </tbody>
+    </table>
+  <!-- **************** Draft List Handlebars Table list ************************** -->
+  <h3 class="Ranking">Your Current Draft List!</h3>
+  <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
+    <thead>
+      <tr>
+        <th class="tablerk">Image</th>
+        <th class="tablerk">Name</th>
+        <th class="tablerk">Position</th>
+        <th class="tablerk">Rank</th>
+        <th class="tablerk">miscFPTS</th>
+        <th class="tablerk">Notes</th>
+        <th class="tablerk">Remove</th>
+      </tr>
+    </thead>
+    <tbody class="DRAFT">
+    </tbody>
+    </table>
 
 
 
@@ -436,22 +491,6 @@
 
 <!-- test area for drafts and list -->
 
-
-<div class="K">
-  <button class="btn btn-sm KS">Kickers</button>
-</div>
-
-<div class="DST">
-  <button class="btn btn-sm DSTS">Defense Team</button>
-</div>
-
-
-<div class="draft">
-  <form id='createDraft'>
-    <input type='text' name="draft[name]" value='dfdfdf'/>
-    <input type="submit"/>
-  </form>
-</div>
 
 <div class="DRAFT">
   <button class="btn btn-sm DRAFTS">Drafts</button>

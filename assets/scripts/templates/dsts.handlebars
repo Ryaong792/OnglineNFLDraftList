@@ -1,26 +1,31 @@
 {{#each dsts as |dst|}}
-<ul>
-<li>{{dst.player}}</li>
-<li>{{dst.image}}</li>
-<li>{{dst.rank}}</li>
-<li>{{dst.sack}}</li>
-<li>{{dst.int}}</li>
-<li>{{dst.fr}}</li>
-<li>{{dst.ff}}</li>
-<li>{{dst.assist}}</li>
-<li>{{dst.safety}}</li>
-<li>{{dst.ydsAGN}}</li>
-<li>{{dst.miscFPTS}}</li>
-</ul>
-<div>
-  <form id='createDraft'>
-    <input type='hidden' name="draft[playerid]" value="{{../user}}{{dst._id}}"/>
-    <input type='hidden' name="draft[name]" value="{{dst.player}}"/>
-    <input type='hidden' name="draft[position]" value="DST"/>
-    <input type='hidden' name="draft[image]" value="{{dst.image}}"/>
-    <input type='hidden' name="draft[rank]" value="{{dst.rank}}"/>
-    <input type='hidden' name="draft[miscFPTS]" value="{{dst.miscFPTS}}"/>
-    <input type="submit"/>
-  </form>
-</div>
+<tr>
+<td class="imagetable"><img src="{{dst.image}}"/></td>
+<td class="tablerk">{{dst.player}}</td>
+<td class="tablerk">{{dst.rank}}</td>
+<td class="tablerk">{{dst.sack}}</td>
+<td class="tablerk">{{dst.int}}</td>
+<td class="tablerk">{{dst.fr}}</td>
+<td class="tablerk">{{dst.ff}}</td>
+<td class="tablerk">{{dst.assist}}</td>
+<td class="tablerk">{{dst.safety}}</td>
+<td class="tablerk">{{dst.ydsAGN}}</td>
+<td class="tablerk">{{dst.miscFPTS}}</td>
+<td>
+  <div>
+    <form id='createDraft'>
+      <input type='hidden' name="draft[playerid]" value="{{../user}}{{dst._id}}"/>
+      <input type='hidden' name="draft[name]" value="{{dst.player}}"/>
+      <input type='hidden' name="draft[position]" value="DST"/>
+      <input type='hidden' name="draft[image]" value="{{dst.image}}"/>
+      <input type='hidden' name="draft[rank]" value="{{dst.rank}}"/>
+      <input type='hidden' name="draft[miscFPTS]" value="{{dst.miscFPTS}}"/>
+      <input type='hidden' name="draft[notes]" value="N/A"/>
+      <button class="btn btn-sm" type="submit">
+         Draft
+      </button>
+    </form>
+  </div>
+</td>
+</tr>
 {{/each}}
