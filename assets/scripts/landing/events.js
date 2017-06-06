@@ -1,9 +1,6 @@
 'use strict'
 const animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
 
-
-
-
 const backToRanking = function () {
   $('#section-handlebars').hide()
   $('#section-ranking').show()

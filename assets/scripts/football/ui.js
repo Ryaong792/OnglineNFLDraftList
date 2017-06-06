@@ -122,10 +122,12 @@ const getDstsFailure = () => {
 const onCreateDraftSuccess = (data) => {
   store.draft = data.draft
   console.log(data.draft)
+  $('#addPlayer').modal('show')
 }
 
 const onCreateDraftFailure = (data) => {
   console.log()
+  $('#noPlayer').modal('show')
 }
 // ************** Draft GET onSuccess/failure ****************
 const onGetDraftsSuccess = (data) => {
@@ -140,6 +142,12 @@ const onGetDraftsSuccess = (data) => {
   $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
     $(this).removeClass('animated ' + 'slideInRight')
   })
+  $('.qbrank').hide()
+  $('.rbrank').hide()
+  $('.wrrank').hide()
+  $('.terank').hide()
+  $('.krank').hide()
+  $('.dstrank').hide()
 }
 
 const onGetDraftsFailure = (data) => {
@@ -147,6 +155,7 @@ const onGetDraftsFailure = (data) => {
 // ************** Draft Delete onSuccess/failure ****************
 const onDeleteDraftSuccess = (data) => {
   console.log()
+  $('#removePlayer').modal('show')
 }
 
 const onDeleteDraftFailure = (data) => {

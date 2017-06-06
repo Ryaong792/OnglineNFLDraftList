@@ -160,7 +160,7 @@
     </div>
   <!-- sticky-bar Ends-->
   <!--=== Header section Ends ===-->
-  <!-- ERROR MESSAGES -->
+  <!-- ERROR/Success MESSAGES -->
 
   <div id="signUpSuccess" class="modal fade">
     <div class="modal-dialog">
@@ -228,6 +228,36 @@
         <div class="alert alert-success alert-dismissible text-center" role="alert">
           <h4>Signed Out</h4>
           <p>You are now signed out. Have a good day!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="addPlayer" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-success alert-dismissible text-center" role="alert">
+          <h4>Draft Success!</h4>
+          <p>Added Player or Defensive Team to your Draft List!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="noPlayer" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-danger alert-dismissible text-center" role="alert">
+          <h4>Draft Failed!</h4>
+          <p>Player or Defensive Team is already in your Draft List!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="removePlayer" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-success alert-dismissible text-center" role="alert">
+          <h4>Removed From Draft Success!</h4>
+          <p>Player or Defensive Team have been removed from your Draft List!</p>
         </div>
       </div>
     </div>
@@ -486,24 +516,6 @@
 </div>
 
 </section>
-
-
-
-
-
-
-
-<!-- test area for drafts and list -->
-
-
-<div class="DRAFT">
-  <button class="btn btn-sm DRAFTS">Drafts</button>
-  <div id="drafts">
-  </div>
-</div>
-
-
-
 
 
 

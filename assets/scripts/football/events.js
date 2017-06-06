@@ -1,6 +1,6 @@
 'use strict'
-const config = require('../config')
-const store = require('../store')
+// const config = require('../config')
+// const store = require('../store')
 const getFormFields = require('../../../lib/get-form-fields')
 const footApi = require('./api.js')
 const footUi = require('./ui.js')
@@ -67,8 +67,9 @@ const deleteDraft = function () {
   const id = $(this).attr('data-id')
   console.log($(this).attr('data-id'))
   footApi.destoryDraft(id)
-  .then(footUi.onDeleteCartSuccess)
-  .catch(footUi.onDeleteCartFailure)
+  .then(footUi.onDeleteDraftSuccess)
+  .catch(footUi.onDeleteDraftFailure)
+  .done(getDraft)
 }
 // ************* Draft Update ************************************
 const addToNotes = function (data) {
@@ -80,7 +81,6 @@ const addToNotes = function (data) {
   // .catch(footUi.onAddToDraftFailure)
 }
 
-
 const addHandlers = () => {
   $('.QBS').on('click', getQbs)
   $('.RBS').on('click', getRbs)
@@ -88,19 +88,15 @@ const addHandlers = () => {
   $('.TES').on('click', getTes)
   $('.KS').on('click', getKs)
   $('.DSTS').on('click', getDsts)
-  //add players/team to draft
+  // add players/team to draft
   $('.QB').on('click', '#createDraft', createDraft)
   $('.RB').on('click', '#createDraft', createDraft)
   $('.WR').on('click', '#createDraft', createDraft)
   $('.TE').on('click', '#createDraft', createDraft)
   $('.K').on('click', '#createDraft', createDraft)
-  $('.DST').on('click','#createDraft', createDraft)
+  $('.DST').on('click', '#createDraft', createDraft)
 // update notes
   $('.DRAFT').on('submit', '#updateNotes', addToNotes)
-
-
-
-
   $('.DRAFTS').on('click', getDraft)
   $('.deleteDraft').on('click', deleteDraft)
   $('.DRAFT').on('click', '.deleteDraft', deleteDraft)
