@@ -34,11 +34,13 @@ const onChgPswd = function (event) {
 }
 
 const linkSignUp = function () {
+  $('#sign-in').trigger('reset')
   $('.sign-in').hide()
   $('.sign-up').show()
 }
 
 const linkSignIn = function () {
+  $('#sign-up').trigger('reset')
   $('.sign-up').hide()
   $('.sign-in').show()
 }

@@ -46,7 +46,7 @@
           <div class="collapse navbar-collapse navbar-responsive-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="current"><a href="#header">Home</a></li>
-              <li><a href="#section-ranking">Rankings</a></li>
+              <li><a href="#section-ranking" id="rankingnav">Rankings</a></li>
               <li><a href="#section-services">test</a></li>
               <li><a href="#step-1">test</a></li>
               <li><a href="#section-screenshots">About</a></li>
@@ -109,11 +109,13 @@
                                 <div class="row sign-out">
                                   <div class="col-md-12">
                                     <div class="bottom text-center">
-                                      <button type="button" class="linkChangePassword btn btn-primary btn-block">Change Password</button>
+                                      <button type="button" class="linkChangePassword btn btn-default">Change Password
+                                        <span class="glyphicon glyphicon-user"></span>
+                                      </button>
                                     </div>
                                     <div class="bottom text-center">
                                       <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="sign-out">
-                                        <button type="submit" class="btn btn-primary btn-block">Sign Out</button>
+                                        <button type="submit" class="btn btn-warning btn-block">Sign Out</button>
                                       </form>
                                     </div>
                                   </div>
@@ -165,7 +167,7 @@
       <div class="modal-content">
         <div class="alert alert-success">
           <h4>Sign-Up has been completed!</h4>
-          <p>Your acount has been created successfully. Please sign-in to begin shopping!</p>
+          <p>Your acount has been created successfully. Please sign-in to start your OngLine NFL Draft List!</p>
         </div>
       </div>
     </div>
@@ -240,16 +242,7 @@
 
         <div class="col-md-8 col-md-offset-2">
           <p class="intro-message">Be prepared with Ongline NFL Draft List!</p>
-
-
-            <button class="btn btnSignIn btn-default">
-               Sign-in
-              <span class="glyphicon glyphicon-user"></span>
-            </button>
-            <button class="btn btnRegister btn-default">
-              Register!
-              <span class="glyphicon glyphicon-asterisk"></span>
-            </button>
+          <h4 class="intro-message2"><p>Sign-in to see Ranking List and your personal Draft List!</p></h4>
         </div>
       </div>
     </div>
@@ -266,7 +259,7 @@
          </div>
          <p><h3>Quarterback</h3> <br/>Fantasy Ranking <br/>1-36</p>
 
-         <button class="btn btnSignIn btn-default QBS">
+         <button class="btn btn-default QBS">
             Draft Ranking
            <span class="glyphicon glyphicon-list"></span>
          </button>
@@ -277,7 +270,7 @@
               <img src="https://s3.amazonaws.com/ryaong792/RB.jpg" />
               </div>
               <p><h3>Running-Back</h3> <br/>Fantasy Ranking <br/>1-158</p>
-              <button class="btn btnSignIn btn-default RBS">
+              <button class="btn btn-default RBS">
                  Draft Ranking
                 <span class="glyphicon glyphicon-list"></span>
               </button>
@@ -288,7 +281,7 @@
               <img src="https://s3.amazonaws.com/ryaong792/WR.jpg" />
               </div>
               <p><h3>Wide-Receiver</h3> <br/>Fantasy Ranking <br/>1-216</p>
-              <button class="btn btnSignIn btn-default WRS">
+              <button class="btn btn-default WRS">
                  Draft Ranking
                 <span class="glyphicon glyphicon-list"></span>
               </button>
@@ -299,7 +292,7 @@
                 <img src="https://s3.amazonaws.com/ryaong792/TE.jpg" />
                 </div>
                 <p><h3>Tight-End</h3> <br/>Fantasy Ranking <br/>1-96</p>
-                <button class="btn btnSignIn btn-default TES">
+                <button class="btn btn-default TES">
                    Draft Ranking
                   <span class="glyphicon glyphicon-list"></span>
                 </button>
@@ -310,7 +303,7 @@
                   <img src="https://s3.amazonaws.com/ryaong792/Kicker.jpg" />
                   </div>
                   <p><h3>Kicker</h3> <br/>Fantasy Ranking <br/>1-36</p>
-                  <button class="btn btnSignIn btn-default KS">
+                  <button class="btn btn-default KS">
                      Draft Ranking
                     <span class="glyphicon glyphicon-list"></span>
                   </button>
@@ -321,7 +314,7 @@
                     <img src="https://s3.amazonaws.com/ryaong792/DST.jpg"/>
                     </div>
                     <p><h3>Defensive Team</h3> <br/>Fantasy Ranking <br/>1-32</p>
-                    <button class="btn btnSignIn btn-default DSTS">
+                    <button class="btn btn-default DSTS">
                        Draft Ranking
                       <span class="glyphicon glyphicon-list"></span>
                     </button>
@@ -330,7 +323,7 @@
 	</section>
 	<!--=== ranking section Ends ===-->
   <!--=== Ranking handlebars section Starts ===-->
-  	<section id="section-handlebars" class="handlebars-wrap">
+<section id="section-handlebars" class="handlebars-wrap">
 
 <!-- **************** QB Handlebars Table list ************************** -->
 <h3 class="Ranking">Quarterback's Rankings 2017</h3>
@@ -475,11 +468,6 @@
     <tbody class="DRAFT">
     </tbody>
     </table>
-
-
-
-
-
 
 </section>
 
