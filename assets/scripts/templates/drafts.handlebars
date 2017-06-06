@@ -5,9 +5,20 @@
 <td class="tablerk">{{draft.position}}</td>
 <td class="tablerk">{{draft.rank}}</td>
 <td class="tablerk">{{draft.miscFPTS}}</td>
-<td class="tablerk">{{draft.notes}}<span class="glyphicon glyphicon-pencil"></span></td>
+<td class="tablerk">{{draft.notes}}
+  <div>
+    <form data-id="{{draft._id}}">
+      <input type='text' name="draft[notes]"/>
+      <button data-id="{{draft._id}}" class="btn btn-sm" type="submit" id='updateNotes'>
+         Update
+      </button>
+    </form>
+  </div>
+
+<!-- <span class="glyphicon glyphicon-pencil updateNotes"></span> -->
+</td>
 <td class="tablerk">
-<button class="btn btn-sm deleteDraft {{draft._id}}" id="deleteDraft" data-id="{{draft._id}}" type"submit">Remove</button>
+<button class="btn btn-sm deleteDraft {{draft._id}}" id="deleteDraft" data-id="{{draft._id}}" type="submit">Remove</button>
 </td>
 </tr>
 {{/each}}

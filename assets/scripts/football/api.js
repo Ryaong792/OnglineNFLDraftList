@@ -78,14 +78,14 @@ const destoryDraft = (id) => {
 }
 
 // ***************** Draft Delete *************************
-const updateNotes = (data) => {
+const updateNotes = (id, data) => {
   return $.ajax({
-    url: config.apiOrigin + '/drafts/',
+    url: config.apiOrigin + '/drafts/' + id,
     method: 'PATCH',
+    data: {draft: {notes: data}},
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data
+    }
   })
 }
 

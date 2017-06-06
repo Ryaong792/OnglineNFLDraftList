@@ -152,6 +152,15 @@ const onGetDraftsSuccess = (data) => {
 
 const onGetDraftsFailure = (data) => {
 }
+const onGetDraftsSuccess1 = (data) => {
+  const showDraftsHTML = showDraftsTemplate({
+    drafts: data.drafts
+  })
+  $('.DRAFT').html(showDraftsHTML)
+}
+
+const onGetDraftsFailure1 = (data) => {
+}
 // ************** Draft Delete onSuccess/failure ****************
 const onDeleteDraftSuccess = (data) => {
   console.log()
@@ -163,10 +172,10 @@ const onDeleteDraftFailure = (data) => {
 }
 // ************** Draft patch onSuccess/failure ****************
 
-const onAddToDraftSuccess = () => {
+const onAddToNotesSuccess = () => {
   console.log('great')
 }
-const onAddToDraftFailure = () => {
+const onAddToNotesFailure = () => {
   console.log('fuck')
 }
 // ************** hide on success *********************
@@ -188,8 +197,10 @@ module.exports = {
   onCreateDraftFailure,
   onGetDraftsSuccess,
   onGetDraftsFailure,
+  onGetDraftsSuccess1,
+  onGetDraftsFailure1,
   onDeleteDraftSuccess,
   onDeleteDraftFailure,
-  onAddToDraftSuccess,
-  onAddToDraftFailure
+  onAddToNotesSuccess,
+  onAddToNotesFailure
 }

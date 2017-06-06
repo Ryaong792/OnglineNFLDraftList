@@ -62,6 +62,11 @@ const getDraft = function (event) {
   .then(footUi.onGetDraftsSuccess)
   .catch(footUi.onGetDraftsFailure)
 }
+const getDraft1 = function (event) {
+  footApi.indexDrafts()
+  .then(footUi.onGetDraftsSuccess1)
+  .catch(footUi.onGetDraftsFailure1)
+}
 // ************* Draft Delete ************************************
 const deleteDraft = function () {
   const id = $(this).attr('data-id')
@@ -69,16 +74,19 @@ const deleteDraft = function () {
   footApi.destoryDraft(id)
   .then(footUi.onDeleteDraftSuccess)
   .catch(footUi.onDeleteDraftFailure)
-  .done(getDraft)
+  .done(getDraft1)
 }
 // ************* Draft Update ************************************
-const addToNotes = function (data) {
+const addToNotes = function () {
   event.preventDefault()
-  const notesId = $(this).data('id')
-  console.log(notesId)
-  footApi.updateNotes(data)
-  // .then(footUi.onAddToDraftSuccess)
-  // .catch(footUi.onAddToDraftFailure)
+  const data = $(this).siblings('input').val()
+  const id = $(this).attr('data-id')
+  console.log($(this).attr('data-id'))
+  console.log(data)
+  footApi.updateNotes(id, data)
+    .then(footUi.onAddToNotesSuccess)
+    .catch(footUi.onAddToNotesFailure)
+    .done(getDraft1)
 }
 
 const addHandlers = () => {
@@ -96,7 +104,7 @@ const addHandlers = () => {
   $('.K').on('click', '#createDraft', createDraft)
   $('.DST').on('click', '#createDraft', createDraft)
 // update notes
-  $('.DRAFT').on('submit', '#updateNotes', addToNotes)
+  $('.DRAFT').on('click', '#updateNotes', addToNotes)
   $('.DRAFTS').on('click', getDraft)
   $('.deleteDraft').on('click', deleteDraft)
   $('.DRAFT').on('click', '.deleteDraft', deleteDraft)
