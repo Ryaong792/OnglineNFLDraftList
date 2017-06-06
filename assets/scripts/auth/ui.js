@@ -1,6 +1,7 @@
 'use strict'
 require('../index')
 const store = require('../store')
+const animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
 
 const signUpSuccess = () => {
   $('#sign-up').trigger('reset')
@@ -22,9 +23,9 @@ const signInSuccess = (data) => {
   $('.sign-out').show()
   $('#rankingnav').show()
   $('#section-ranking').show()
-  // $('#section-ranking').removeClass('animated slideOutRight')
-  // $('#section-ranking').show().addClass('animated flipInX')
-
+  $('#section-ranking').addClass('animated slideInLeft').one(animationEnd, function () {
+    $(this).removeClass('animated ' + 'slideInLeft')
+  })
   $('.dropdown-menu').trigger('click')
   $('#welcome').modal('show')
 }

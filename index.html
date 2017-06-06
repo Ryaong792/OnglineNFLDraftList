@@ -251,6 +251,7 @@
 
 <!--=== Ranking section Starts ===-->
 	<section id="section-ranking" class="ranking-wrap">
+  <button class='btn btn-default draftList DRAFTS'>Your Current Draft List! <span class="glyphicon glyphicon-list glyphicon-list1"></span></button><br/>
     <h2 class="Ranking"> Draft rankings </h2>
      <div id="stack1" class="card-container start">
        <section id="card1" class="card card1">
@@ -324,9 +325,11 @@
 	<!--=== ranking section Ends ===-->
   <!--=== Ranking handlebars section Starts ===-->
 <section id="section-handlebars" class="handlebars-wrap">
-
+  <button class='btn btn-default backToRanking'> <span class="glyphicon glyphicon-arrow-left"></span>Back to Draft Rankings</button>
+  <button class='btn btn-default draftList DRAFTS'>Your Current Draft List! <span class="glyphicon glyphicon-list glyphicon-list1"></span></button>
 <!-- **************** QB Handlebars Table list ************************** -->
-<h3 class="Ranking">Quarterback's Rankings 2017</h3>
+<div class='qbrank'>
+  <h3 class="Ranking">Quarterback's Rankings 2017</h3>
       <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
         <thead>
           <tr>
@@ -348,8 +351,10 @@
         <tbody class="QB">
         </tbody>
         </table>
+</div>
 <!-- **************** RB Handlebars Table list ************************** -->
-    <h3 class="Ranking">Running-Back's Rankings 2017</h3>
+<div class='rbrank'>
+  <h3 class="Ranking">Running-Back's Rankings 2017</h3>
     <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
       <thead>
         <tr>
@@ -369,105 +374,116 @@
       </thead>
       <tbody class="RB">
       </tbody>
-      </table>
+    </table>
+</div>
 <!-- **************** WR Handlebars Table list ************************** -->
-      <h3 class="Ranking">Wide-Receiver's Rankings 2017</h3>
-      <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
-        <thead>
-          <tr>
-            <th class="tablerk">Image</th>
-            <th class="tablerk">Name</th>
-            <th class="tablerk">Rank</th>
-            <th class="tablerk">RushATT</th>
-            <th class="tablerk">RushYDS</th>
-            <th class="tablerk">RushTDS</th>
-            <th class="tablerk">ReceivingREC</th>
-            <th class="tablerk">ReceivingYDS</th>
-            <th class="tablerk">ReceivingTDS</th>
-            <th class="tablerk">miscFL</th>
-            <th class="tablerk">miscFPTS</th>
-            <th class="tablerk">Draft</th>
+<div class='wrrank'>
+  <h3 class="Ranking">Wide-Receiver's Rankings 2017</h3>
+    <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
+      <thead>
+        <tr>
+          <th class="tablerk">Image</th>
+          <th class="tablerk">Name</th>
+          <th class="tablerk">Rank</th>
+          <th class="tablerk">RushATT</th>
+          <th class="tablerk">RushYDS</th>
+          <th class="tablerk">RushTDS</th>
+          <th class="tablerk">ReceivingREC</th>
+          <th class="tablerk">ReceivingYDS</th>
+          <th class="tablerk">ReceivingTDS</th>
+          <th class="tablerk">miscFL</th>
+          <th class="tablerk">miscFPTS</th>
+          <th class="tablerk">Draft</th>
           </tr>
-        </thead>
-        <tbody class="WR">
-        </tbody>
-        </table>
+      </thead>
+      <tbody class="WR">
+      </tbody>
+    </table>
+</div>
 <!-- **************** TE Handlebars Table list ************************** -->
-<h3 class="Ranking">Tight-End's Rankings 2017</h3>
-<table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
-  <thead>
-    <tr>
-      <th class="tablerk">Image</th>
-      <th class="tablerk">Name</th>
-      <th class="tablerk">Rank</th>
-      <th class="tablerk">ReceivingREC</th>
-      <th class="tablerk">ReceivingYDS</th>
-      <th class="tablerk">ReceivingTDS</th>
-      <th class="tablerk">miscFL</th>
-      <th class="tablerk">miscFPTS</th>
-      <th class="tablerk">Draft</th>
-    </tr>
-  </thead>
-  <tbody class="TE">
-  </tbody>
-  </table>
-  <!-- **************** Kickers Handlebars Table list ************************** -->
+<div class='terank'>
+  <h3 class="Ranking">Tight-End's Rankings 2017</h3>
+    <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
+    <thead>
+      <tr>
+        <th class="tablerk">Image</th>
+        <th class="tablerk">Name</th>
+        <th class="tablerk">Rank</th>
+        <th class="tablerk">ReceivingREC</th>
+        <th class="tablerk">ReceivingYDS</th>
+        <th class="tablerk">ReceivingTDS</th>
+        <th class="tablerk">miscFL</th>
+        <th class="tablerk">miscFPTS</th>
+        <th class="tablerk">Draft</th>
+      </tr>
+    </thead>
+    <tbody class="TE">
+    </tbody>
+   </table>
+</div>
+<!-- **************** Kickers Handlebars Table list ************************** -->
+<div class='krank'>
   <h3 class="Ranking">Kicker's Rankings 2017</h3>
-  <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
-    <thead>
-      <tr>
-        <th class="tablerk">Image</th>
-        <th class="tablerk">Name</th>
-        <th class="tablerk">Rank</th>
-        <th class="tablerk">FieldG</th>
-        <th class="tablerk">FieldGA</th>
-        <th class="tablerk">ExtraPT</th>
-        <th class="tablerk">miscFPTS</th>
-        <th class="tablerk">Draft</th>
-      </tr>
-    </thead>
-    <tbody class="K">
-    </tbody>
+    <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
+      <thead>
+        <tr>
+          <th class="tablerk">Image</th>
+          <th class="tablerk">Name</th>
+          <th class="tablerk">Rank</th>
+          <th class="tablerk">FieldG</th>
+          <th class="tablerk">FieldGA</th>
+          <th class="tablerk">ExtraPT</th>
+          <th class="tablerk">miscFPTS</th>
+          <th class="tablerk">Draft</th>
+        </tr>
+      </thead>
+      <tbody class="K">
+      </tbody>
     </table>
-  <!-- **************** Def Team Handlebars Table list ************************** -->
+</div>
+<!-- **************** Def Team Handlebars Table list ************************** -->
+<div class='dstrank'>
   <h3 class="Ranking">Defensive Team's Rankings 2017</h3>
-  <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
-    <thead>
-      <tr>
-        <th class="tablerk">Image</th>
-        <th class="tablerk">Name</th>
-        <th class="tablerk">Rank</th>
-        <th class="tablerk">Sacks</th>
-        <th class="tablerk">Int</th>
-        <th class="tablerk">FR</th>
-        <th class="tablerk">FF</th>
-        <th class="tablerk">Assist</th>
-        <th class="tablerk">Safety</th>
-        <th class="tablerk">YdsAGN</th>
-        <th class="tablerk">miscFPTS</th>
-        <th class="tablerk">Draft</th>
-      </tr>
-    </thead>
-    <tbody class="DST">
-    </tbody>
+    <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
+      <thead>
+        <tr>
+          <th class="tablerk">Image</th>
+          <th class="tablerk">Name</th>
+          <th class="tablerk">Rank</th>
+          <th class="tablerk">Sacks</th>
+          <th class="tablerk">Int</th>
+          <th class="tablerk">FR</th>
+          <th class="tablerk">FF</th>
+          <th class="tablerk">Assist</th>
+          <th class="tablerk">Safety</th>
+          <th class="tablerk">YdsAGN</th>
+          <th class="tablerk">miscFPTS</th>
+          <th class="tablerk">Draft</th>
+        </tr>
+      </thead>
+      <tbody class="DST">
+      </tbody>
     </table>
-  <!-- **************** Draft List Handlebars Table list ************************** -->
+</div>
+<!-- **************** Draft List Handlebars Table list ************************** -->
+<div class='draftListing'>
   <h3 class="Ranking">Your Current Draft List!</h3>
-  <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
-    <thead>
-      <tr>
-        <th class="tablerk">Image</th>
-        <th class="tablerk">Name</th>
-        <th class="tablerk">Position</th>
-        <th class="tablerk">Rank</th>
-        <th class="tablerk">miscFPTS</th>
-        <th class="tablerk">Notes</th>
-        <th class="tablerk">Remove</th>
-      </tr>
-    </thead>
-    <tbody class="DRAFT">
-    </tbody>
+    <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
+      <thead>
+        <tr>
+          <th class="tablerk">Image</th>
+          <th class="tablerk">Name</th>
+          <th class="tablerk">Position</th>
+          <th class="tablerk">Rank</th>
+          <th class="tablerk">miscFPTS</th>
+          <th class="tablerk">Notes</th>
+          <th class="tablerk">Remove</th>
+        </tr>
+      </thead>
+      <tbody class="DRAFT">
+      </tbody>
     </table>
+</div>
 
 </section>
 

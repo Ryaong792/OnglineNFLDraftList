@@ -7,6 +7,7 @@ const showTesTemplate = require('../templates/tes.handlebars')
 const showKsTemplate = require('../templates/ks.handlebars')
 const showDstsTemplate = require('../templates/dsts.handlebars')
 const showDraftsTemplate = require('../templates/drafts.handlebars')
+const animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
 
 // ************** QB onSuccess/failure ****************
 const getQbsSuccess = (data) => {
@@ -16,11 +17,15 @@ const getQbsSuccess = (data) => {
     user: store.user.email
   })
   $('.QB').html(showQbsHTML)
-  // $('#section-ranking').hide()
+  $('#section-ranking').hide()
+  $('#section-handlebars').show()
+  $('.qbrank').show()
+  $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
+    $(this).removeClass('animated ' + 'slideInRight')
+  })
 }
 
-const getQbsFailure = (error) => {
-  console.log(error)
+const getQbsFailure = () => {
 }
 // ************** RB onSuccess/failure ****************
 const getRbsSuccess = (data) => {
@@ -30,10 +35,15 @@ const getRbsSuccess = (data) => {
     user: store.user.email
   })
   $('.RB').html(showRbsHTML)
+  $('#section-ranking').hide()
+  $('#section-handlebars').show()
+  $('.rbrank').show()
+  $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
+    $(this).removeClass('animated ' + 'slideInRight')
+  })
 }
 
-const getRbsFailure = (error) => {
-  console.log(error)
+const getRbsFailure = () => {
 }
 // ************** WR onSuccess/failure ****************
 const getWrsSuccess = (data) => {
@@ -42,7 +52,13 @@ const getWrsSuccess = (data) => {
     wrs: data.wrs,
     user: store.user.email
   })
-  $('.WR').append(showWrsHTML)
+  $('.WR').html(showWrsHTML)
+  $('#section-ranking').hide()
+  $('#section-handlebars').show()
+  $('.wrrank').show()
+  $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
+    $(this).removeClass('animated ' + 'slideInRight')
+  })
 }
 
 const getWrsFailure = (error) => {
@@ -55,11 +71,16 @@ const getTesSuccess = (data) => {
     tes: data.tes,
     user: store.user.email
   })
-  $('.TE').append(showTesHTML)
+  $('.TE').html(showTesHTML)
+  $('#section-ranking').hide()
+  $('#section-handlebars').show()
+  $('.terank').show()
+  $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
+    $(this).removeClass('animated ' + 'slideInRight')
+  })
 }
 
-const getTesFailure = (error) => {
-  console.log(error)
+const getTesFailure = () => {
 }
 // ************** K(kickers) onSuccess/failure ****************
 const getKsSuccess = (data) => {
@@ -68,24 +89,33 @@ const getKsSuccess = (data) => {
     ks: data.ks,
     user: store.user.email
   })
-  $('.K').append(showKsHTML)
+  $('.K').html(showKsHTML)
+  $('#section-ranking').hide()
+  $('#section-handlebars').show()
+  $('.krank').show()
+  $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
+    $(this).removeClass('animated ' + 'slideInRight')
+  })
 }
 
-const getKsFailure = (error) => {
-  console.log(error)
+const getKsFailure = () => {
 }
 // ************** DST(Def team) onSuccess/failure ****************
 const getDstsSuccess = (data) => {
-  console.log(data)
   const showDstsHTML = showDstsTemplate({
     dsts: data.dsts,
     user: store.user.email
   })
-  $('.DST').append(showDstsHTML)
+  $('.DST').html(showDstsHTML)
+  $('#section-ranking').hide()
+  $('#section-handlebars').show()
+  $('.dstrank').show()
+  $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
+    $(this).removeClass('animated ' + 'slideInRight')
+  })
 }
 
-const getDstsFailure = (error) => {
-  console.log(error)
+const getDstsFailure = () => {
 }
 // ************ DRAFT LIST *******************************
 // ************** Draft create onSuccess/failure ****************
@@ -99,15 +129,20 @@ const onCreateDraftFailure = (data) => {
 }
 // ************** Draft GET onSuccess/failure ****************
 const onGetDraftsSuccess = (data) => {
-  console.log(data)
   const showDraftsHTML = showDraftsTemplate({
     drafts: data.drafts
   })
-  $('.DRAFT').append(showDraftsHTML)
+  $('.DRAFT').html(showDraftsHTML)
+  $('#section-ranking').hide()
+  $('.draftList').hide()
+  $('#section-handlebars').show()
+  $('.draftListing').show()
+  $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
+    $(this).removeClass('animated ' + 'slideInRight')
+  })
 }
 
 const onGetDraftsFailure = (data) => {
-  console.log('fuck off and login')
 }
 // ************** Draft Delete onSuccess/failure ****************
 const onDeleteDraftSuccess = (data) => {

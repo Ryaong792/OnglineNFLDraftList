@@ -1,5 +1,5 @@
-'use strict'
 
-$(document).ready(function () {
-  $('#tableqb').DataTable()
-})
+//
+// $(document).ready(function () {
+//   $('#tableqb').DataTable()
+// })
