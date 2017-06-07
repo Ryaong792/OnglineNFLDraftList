@@ -1,36 +1,54 @@
-{{#each qbs as |qb|}}
-
-    <tr>
-    <td class="imagetable"><img src="{{qb.image}}"/></td>
-    <td class="tablerk">{{qb.player}}</td>
-    <td class="tablerk">{{qb.rank}}</td>
-    <td class="tablerk">{{qb.passATT}}</td>
-    <td class="tablerk">{{qb.passCMP}}</td>
-    <td class="tablerk">{{qb.passYDS}}</td>
-    <td class="tablerk">{{qb.passTDS}}</td>
-    <td class="tablerk">{{qb.passINTS}}</td>
-    <td class="tablerk">{{qb.rushATT}}</td>
-    <td class="tablerk">{{qb.rushTDS}}</td>
-    <td class="tablerk">{{qb.miscFL}}</td>
-    <td class="tablerk">{{qb.miscFPTS}}</td>
-
-    <td>
-      <div>
-        <form id='createDraft'>
-          <input type='hidden' name="draft[playerid]" value="{{../user}}{{qb._id}}"/>
-          <input type='hidden' name="draft[name]" value="{{qb.player}}"/>
-          <input type='hidden' name="draft[position]" value="QB"/>
-          <input type='hidden' name="draft[image]" value="{{qb.image}}"/>
-          <input type='hidden' name="draft[rank]" value="{{qb.rank}}"/>
-          <input type='hidden' name="draft[miscFPTS]" value="{{qb.miscFPTS}}"/>
-          <input type='hidden' name="draft[notes]" value="N/A"/>
-          <button class="btn btn-sm" type="submit">
-             Draft
-          </button>
-        </form>
-      </div>
-    </td>
-  </tr>
-
-
-{{/each}}
+<h3 class="Ranking">Quarterback's Rankings 2017</h3>
+    <table class="table table-bordered table-hover table-condensed tableqb" id="tableqb">
+      <thead>
+        <tr>
+          <th class="tablerk">Image</th>
+          <th class="tablerk">Name</th>
+          <th class="tablerk">Rank</th>
+          <th class="tablerk">PassATT</th>
+          <th class="tablerk">PassCMP</th>
+          <th class="tablerk">PassYDS</th>
+          <th class="tablerk">PassTDS</th>
+          <th class="tablerk">PassINT</th>
+          <th class="tablerk">RushATT</th>
+          <th class="tablerk">RushTDS</th>
+          <th class="tablerk">miscFL</th>
+          <th class="tablerk">miscFPTS</th>
+          <th class="tablerk">Draft</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each qbs as |qb|}}
+          <tr>
+            <td class="imagetable"><img src="{{qb.image}}"/></td>
+            <td class="tablerk">{{qb.player}}</td>
+            <td class="tablerk">{{qb.rank}}</td>
+            <td class="tablerk">{{qb.passATT}}</td>
+            <td class="tablerk">{{qb.passCMP}}</td>
+            <td class="tablerk">{{qb.passYDS}}</td>
+            <td class="tablerk">{{qb.passTDS}}</td>
+            <td class="tablerk">{{qb.passINTS}}</td>
+            <td class="tablerk">{{qb.rushATT}}</td>
+            <td class="tablerk">{{qb.rushTDS}}</td>
+            <td class="tablerk">{{qb.miscFL}}</td>
+            <td class="tablerk">{{qb.miscFPTS}}</td>
+            <td>
+              <div>
+                <form id='createDraft'>
+                  <input type='hidden' name="draft[playerid]" value="{{../user}}{{qb._id}}"/>
+                  <input type='hidden' name="draft[name]" value="{{qb.player}}"/>
+                  <input type='hidden' name="draft[position]" value="QB"/>
+                  <input type='hidden' name="draft[image]" value="{{qb.image}}"/>
+                  <input type='hidden' name="draft[rank]" value="{{qb.rank}}"/>
+                  <input type='hidden' name="draft[miscFPTS]" value="{{qb.miscFPTS}}"/>
+                  <input type='hidden' name="draft[notes]" value="N/A"/>
+                  <button class="btn btn-sm" type="submit">
+                     Draft
+                  </button>
+                </form>
+              </div>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+      </table>

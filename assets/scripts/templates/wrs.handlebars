@@ -1,31 +1,52 @@
-{{#each wrs as |wr|}}
-<tr>
-<td class="imagetable"><img src="{{wr.image}}"/></td>
-<td class="tablerk">{{wr.player}}</td>
-<td class="tablerk">{{wr.rank}}</td>
-<td class="tablerk">{{wr.rushATT}}</td>
-<td class="tablerk">{{wr.rushYDS}}</td>
-<td class="tablerk">{{wr.rushTDS}}</td>
-<td class="tablerk">{{wr.receivingREC}}</td>
-<td class="tablerk">{{wr.receivingYDS}}</td>
-<td class="tablerk">{{wr.receivingTDS}}</td>
-<td class="tablerk">{{wr.miscFL}}</td>
-<td class="tablerk">{{wr.miscFPTS}}</td>
-<td>
-  <div>
-    <form id='createDraft'>
-      <input type='hidden' name="draft[playerid]" value="{{../user}}{{wr._id}}"/>
-      <input type='hidden' name="draft[name]" value="{{wr.player}}"/>
-      <input type='hidden' name="draft[position]" value="WR"/>
-      <input type='hidden' name="draft[image]" value="{{wr.image}}"/>
-      <input type='hidden' name="draft[rank]" value="{{wr.rank}}"/>
-      <input type='hidden' name="draft[miscFPTS]" value="{{wr.miscFPTS}}"/>
-      <input type='hidden' name="draft[notes]" value="N/A"/>
-      <button class="btn btn-sm" type="submit">
-         Draft
-      </button>
-    </form>
-  </div>
-</td>
-</tr>
-{{/each}}
+<h3 class="Ranking">Wide-Receiver's Rankings 2017</h3>
+  <table class="table table-bordered table-hover table-condensed tableqb" id="tablewr">
+    <thead>
+      <tr>
+        <th class="tablerk">Image</th>
+        <th class="tablerk">Name</th>
+        <th class="tablerk">Rank</th>
+        <th class="tablerk">RushATT</th>
+        <th class="tablerk">RushYDS</th>
+        <th class="tablerk">RushTDS</th>
+        <th class="tablerk">ReceivingREC</th>
+        <th class="tablerk">ReceivingYDS</th>
+        <th class="tablerk">ReceivingTDS</th>
+        <th class="tablerk">miscFL</th>
+        <th class="tablerk">miscFPTS</th>
+        <th class="tablerk">Draft</th>
+        </tr>
+    </thead>
+    <tbody>
+      {{#each wrs as |wr|}}
+      <tr>
+      <td class="imagetable"><img src="{{wr.image}}"/></td>
+      <td class="tablerk">{{wr.player}}</td>
+      <td class="tablerk">{{wr.rank}}</td>
+      <td class="tablerk">{{wr.rushATT}}</td>
+      <td class="tablerk">{{wr.rushYDS}}</td>
+      <td class="tablerk">{{wr.rushTDS}}</td>
+      <td class="tablerk">{{wr.receivingREC}}</td>
+      <td class="tablerk">{{wr.receivingYDS}}</td>
+      <td class="tablerk">{{wr.receivingTDS}}</td>
+      <td class="tablerk">{{wr.miscFL}}</td>
+      <td class="tablerk">{{wr.miscFPTS}}</td>
+      <td>
+        <div>
+          <form id='createDraft'>
+            <input type='hidden' name="draft[playerid]" value="{{../user}}{{wr._id}}"/>
+            <input type='hidden' name="draft[name]" value="{{wr.player}}"/>
+            <input type='hidden' name="draft[position]" value="WR"/>
+            <input type='hidden' name="draft[image]" value="{{wr.image}}"/>
+            <input type='hidden' name="draft[rank]" value="{{wr.rank}}"/>
+            <input type='hidden' name="draft[miscFPTS]" value="{{wr.miscFPTS}}"/>
+            <input type='hidden' name="draft[notes]" value="N/A"/>
+            <button class="btn btn-sm" type="submit">
+               Draft
+            </button>
+          </form>
+        </div>
+      </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
