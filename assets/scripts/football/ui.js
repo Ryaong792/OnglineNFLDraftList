@@ -23,6 +23,7 @@ const getQbsSuccess = (data) => {
   $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
     $(this).removeClass('animated ' + 'slideInRight')
   })
+  $('#tableqb').DataTable()
 }
 
 const getQbsFailure = () => {
@@ -41,6 +42,7 @@ const getRbsSuccess = (data) => {
   $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
     $(this).removeClass('animated ' + 'slideInRight')
   })
+  $('#tablerb').DataTable()
 }
 
 const getRbsFailure = () => {
@@ -59,6 +61,7 @@ const getWrsSuccess = (data) => {
   $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
     $(this).removeClass('animated ' + 'slideInRight')
   })
+  $('#tablewr').DataTable()
 }
 
 const getWrsFailure = (error) => {
@@ -78,6 +81,7 @@ const getTesSuccess = (data) => {
   $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
     $(this).removeClass('animated ' + 'slideInRight')
   })
+  $('#tablete').DataTable()
 }
 
 const getTesFailure = () => {
@@ -95,6 +99,7 @@ const getKsSuccess = (data) => {
   $('.krank').show()
   $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
     $(this).removeClass('animated ' + 'slideInRight')
+    $('#tablek').DataTable()
   })
 }
 
@@ -113,6 +118,7 @@ const getDstsSuccess = (data) => {
   $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
     $(this).removeClass('animated ' + 'slideInRight')
   })
+  $('#tabledst').DataTable()
 }
 
 const getDstsFailure = () => {
@@ -148,6 +154,7 @@ const onGetDraftsSuccess = (data) => {
   $('.terank').hide()
   $('.krank').hide()
   $('.dstrank').hide()
+  $('#tabledf').DataTable()
 }
 
 const onGetDraftsFailure = (data) => {
@@ -157,6 +164,7 @@ const onGetDraftsSuccess1 = (data) => {
     drafts: data.drafts
   })
   $('.DRAFT').html(showDraftsHTML)
+  $('#tabledf').DataTable()
 }
 
 const onGetDraftsFailure1 = (data) => {

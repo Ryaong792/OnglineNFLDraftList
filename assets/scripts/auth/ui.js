@@ -58,6 +58,7 @@ const chgPswdSuccess = () => {
 }
 
 const chgPswdFailure = () => {
+  $('#change-password').trigger('reset')
   $('.dropdown-menu').trigger('click')
   $('#chgPswdFailure').modal('show')
 }
