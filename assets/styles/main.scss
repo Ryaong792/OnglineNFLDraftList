@@ -277,9 +277,9 @@ left: calc(50% - 110px);
 
 #section-video {
   margin-top: 0%;
-  margin-bottom: 2%;
-  overflow: auto;
-  clear: none;
+	height: 600px;
+	overflow: auto;
+	position: relative;
 }
 
 

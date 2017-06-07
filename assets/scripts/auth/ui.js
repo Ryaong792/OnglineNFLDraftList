@@ -49,6 +49,7 @@ const signOutSuccess = (data) => {
   $('.krank').hide()
   $('.dstrank').hide()
   $('.draftListing').hide()
+  $('.draftList').show()
   $('#signOut').modal('show')
   $('#section-ranking').hide()
   $('#section-handlebars').hide()
