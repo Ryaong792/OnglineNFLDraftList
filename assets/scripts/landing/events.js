@@ -17,6 +17,7 @@ const backToRanking = function () {
   $('.draftListing').hide()
 }
 
+
 const addHandlers = () => {
   $('.carousel').carousel()
   $('#section-ranking').hide()

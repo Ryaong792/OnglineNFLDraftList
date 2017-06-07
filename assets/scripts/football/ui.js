@@ -173,6 +173,7 @@ const onGetDraftsFailure1 = (data) => {
 const onDeleteDraftSuccess = (data) => {
   console.log()
   $('#removePlayer').modal('show')
+  $('#tabledf').DataTable()
 }
 
 const onDeleteDraftFailure = (data) => {

@@ -1,24 +1,44 @@
-{{#each drafts as |draft|}}
-<tr>
-<td class="imagetable"><img src="{{draft.image}}"/></td>
-<td class="tablerk">{{draft.name}}</td>
-<td class="tablerk">{{draft.position}}</td>
-<td class="tablerk">{{draft.rank}}</td>
-<td class="tablerk">{{draft.miscFPTS}}</td>
-<td class="tablerk">{{draft.notes}}
-  <div>
-    <form data-id="{{draft._id}}">
-      <input type='text' name="draft[notes]"/>
-      <button data-id="{{draft._id}}" class="btn btn-sm" type="submit" id='updateNotes'>
-         Update
-      </button>
-    </form>
-  </div>
 
-<!-- <span class="glyphicon glyphicon-pencil updateNotes"></span> -->
-</td>
-<td class="tablerk">
-<button class="btn btn-sm deleteDraft {{draft._id}}" id="deleteDraft" data-id="{{draft._id}}" type="submit">Remove</button>
-</td>
-</tr>
-{{/each}}
+
+
+<h3 class="Ranking">Your Current Draft List!</h3>
+  <table class="table table-bordered table-hover table-condensed tableqb" id="tabledf">
+    <thead>
+      <tr>
+        <th class="tablerk">Image</th>
+        <th class="tablerk">Name</th>
+        <th class="tablerk">Position</th>
+        <th class="tablerk">Rank</th>
+        <th class="tablerk">miscFPTS</th>
+        <th class="tablerk">Notes</th>
+        <th class="tablerk">Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each drafts as |draft|}}
+      <tr>
+      <td class="imagetable"><img src="{{draft.image}}"/></td>
+      <td class="tablerk">{{draft.name}}</td>
+      <td class="tablerk">{{draft.position}}</td>
+      <td class="tablerk">{{draft.rank}}</td>
+      <td class="tablerk">{{draft.miscFPTS}}</td>
+      <td class="tablerk">{{draft.notes}}
+        <div>
+          <form data-id="{{draft._id}}">
+            <input type='text' name="draft[notes]"/>
+            <button data-id="{{draft._id}}" class="btn btn-sm" type="submit" id='updateNotes'>
+               Update
+            </button>
+          </form>
+        </div>
+
+      <!-- <span class="glyphicon glyphicon-pencil updateNotes"></span> -->
+      </td>
+      <td class="tablerk">
+      <button class="btn btn-sm deleteDraft {{draft._id}}" id="deleteDraft" data-id="{{draft._id}}" type="submit">Remove</button>
+      </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

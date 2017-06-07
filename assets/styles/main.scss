@@ -126,6 +126,7 @@ font-weight: 700;
 }
 
 .section-title {
+  margin-top: 48px;
 	margin-bottom: 48px;
 }
 
@@ -136,7 +137,6 @@ font-weight: 700;
 	display: inline-block;
 	margin-top: 0;
 	padding: 8px 0;
-
 }
 
 .section-overlay {
@@ -275,12 +275,13 @@ left: calc(50% - 110px);
   color: red;
 }
 
-.tester1 {
-  float: right;
+#section-video {
+  margin-top: 0%;
+  margin-bottom: 2%;
+  overflow: auto;
+  clear: none;
 }
-.tester2 {
-  float: left;
-}
+
 
 
 /* ================ Ranking Section ================ */
