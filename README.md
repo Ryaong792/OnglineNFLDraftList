@@ -1,16 +1,13 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# Capstone - Ongling NFL Draft List
+# Capstone - Ongline NFL Draft List
 
 NFL fantasy draft list to prepare for draft day!
 - Updated 2017 Fantasy stats for QB, TE, WR, RB, K, DST
 - Person draft list on login
 
-This site has user authentication and 6 tables with 2017 stats relating to NFL positions for Draft.  Upon login
-user will be able to view the list of players base on position and draft them to their personal list.  Each user
-can only add the same player once, but this is only on their personal ID.  Other users login will still be able to
-add players as long its not same player on their list.  Once you select a player you will be able to update the notes
-section in the draft list table to put your notes on the player.
+This site has user authentication and 6 tables with 2017 stats relating to NFL positions for Fantasy Draft.  Upon login user will be able to view the list of players base on position and draft them to their personal draft list.  Each user
+can only add the same player once, but this is only on their personal ID.  Other users login will still be able to add players as long its not same player on their list.  Once you select a player you will be able to update the notes section in the draft list table to put your notes on the player.
 
 The UI was built using bootstrap and players and draft list are display with the use of handlebars.
 
@@ -18,7 +15,7 @@ The UI was built using bootstrap and players and draft list are display with the
 - Client
   - Repo: https://github.com/Ryaong792/OnglineNFLDraftList
   - Deployed: https://ryaong792.github.io/OnglineNFLDraftList/
--Backend(API)
+- Backend(API)
   - Repo: https://github.com/Ryaong792/OngLineNFLDraftListAPI
   - Deployed: https://onglinenfldraftlist.herokuapp.com
 
@@ -44,7 +41,11 @@ The UI was built using bootstrap and players and draft list are display with the
 
 # Reflections and Lessons Learned
 
--  # Issues
+-  ## Issues
+  - Wanted to have datatables to have search feature and tabs for the 6
+    datatables for QB, TE, RB, WR, K, & DST.  Was having a hard time trying it
+    with js or added into the backend.  Found a NPM install for JS sub-library
+    that help resolved the issue without much coding.
   - Thought installing NPM plugs would of been easy.  The command itself
     was fine but the main problem that trying to get it require was not as simple.
     Had to find the area to require the file was not clear cut answer.  Was able
@@ -54,7 +55,7 @@ The UI was built using bootstrap and players and draft list are display with the
     will work.  Learned a fiew ways to get handlebars working with JS by using the
     main class where the handlebars are displaying to get JS to work.
 
--  # Overall
+-  ## Overall
   - This Captone was the easiest project since I planned better then my other 3.
     I had my backend up frist and made sure that it communicated with my front it
     and tested a deploy on both before I started doing final edits for my front end.
