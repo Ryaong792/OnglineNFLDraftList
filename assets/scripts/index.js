@@ -14,6 +14,7 @@ $(() => {
 require('./example')
 require('./landing/cards.js')
 require('./landing/ryan.js')
+require('./landing/smoothscroll.js')
 const authEvents = require('./auth/events.js')
 const footballEvents = require('./football/events.js')
 const landingEvents = require('./landing/events.js')
