@@ -11,7 +11,6 @@ const animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimati
 
 // ************** QB onSuccess/failure ****************
 const getQbsSuccess = (data) => {
-  console.log(data)
   const showQbsHTML = showQbsTemplate({
     qbs: data.qbs,
     user: store.user.email
@@ -19,6 +18,8 @@ const getQbsSuccess = (data) => {
   $('.QB').html(showQbsHTML)
   $('#section-ranking').hide()
   $('#section-handlebars').show()
+  $('#handlebars').show()
+  $('#rankingnav').hide()
   $('.qbrank').show()
   $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
     $(this).removeClass('animated ' + 'slideInRight')
@@ -30,7 +31,6 @@ const getQbsFailure = () => {
 }
 // ************** RB onSuccess/failure ****************
 const getRbsSuccess = (data) => {
-  console.log(data)
   const showRbsHTML = showRbsTemplate({
     rbs: data.rbs,
     user: store.user.email
@@ -38,6 +38,8 @@ const getRbsSuccess = (data) => {
   $('.RB').html(showRbsHTML)
   $('#section-ranking').hide()
   $('#section-handlebars').show()
+  $('#rankingnav').hide()
+  $('#handlebars').show()
   $('.rbrank').show()
   $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
     $(this).removeClass('animated ' + 'slideInRight')
@@ -49,7 +51,6 @@ const getRbsFailure = () => {
 }
 // ************** WR onSuccess/failure ****************
 const getWrsSuccess = (data) => {
-  console.log(data)
   const showWrsHTML = showWrsTemplate({
     wrs: data.wrs,
     user: store.user.email
@@ -57,6 +58,8 @@ const getWrsSuccess = (data) => {
   $('.WR').html(showWrsHTML)
   $('#section-ranking').hide()
   $('#section-handlebars').show()
+  $('#rankingnav').hide()
+  $('#handlebars').show()
   $('.wrrank').show()
   $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
     $(this).removeClass('animated ' + 'slideInRight')
@@ -64,12 +67,10 @@ const getWrsSuccess = (data) => {
   $('#tablewr').DataTable()
 }
 
-const getWrsFailure = (error) => {
-  console.log(error)
+const getWrsFailure = () => {
 }
 // ************** TE onSuccess/failure ****************
 const getTesSuccess = (data) => {
-  console.log(data)
   const showTesHTML = showTesTemplate({
     tes: data.tes,
     user: store.user.email
@@ -77,6 +78,8 @@ const getTesSuccess = (data) => {
   $('.TE').html(showTesHTML)
   $('#section-ranking').hide()
   $('#section-handlebars').show()
+  $('#rankingnav').hide()
+  $('#handlebars').show()
   $('.terank').show()
   $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
     $(this).removeClass('animated ' + 'slideInRight')
@@ -88,7 +91,6 @@ const getTesFailure = () => {
 }
 // ************** K(kickers) onSuccess/failure ****************
 const getKsSuccess = (data) => {
-  console.log(data)
   const showKsHTML = showKsTemplate({
     ks: data.ks,
     user: store.user.email
@@ -96,6 +98,8 @@ const getKsSuccess = (data) => {
   $('.K').html(showKsHTML)
   $('#section-ranking').hide()
   $('#section-handlebars').show()
+  $('#rankingnav').hide()
+  $('#handlebars').show()
   $('.krank').show()
   $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
     $(this).removeClass('animated ' + 'slideInRight')
@@ -114,6 +118,8 @@ const getDstsSuccess = (data) => {
   $('.DST').html(showDstsHTML)
   $('#section-ranking').hide()
   $('#section-handlebars').show()
+  $('#rankingnav').hide()
+  $('#handlebars').show()
   $('.dstrank').show()
   $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
     $(this).removeClass('animated ' + 'slideInRight')
@@ -127,12 +133,10 @@ const getDstsFailure = () => {
 // ************** Draft create onSuccess/failure ****************
 const onCreateDraftSuccess = (data) => {
   store.draft = data.draft
-  console.log(data.draft)
   $('#addPlayer').modal('show')
 }
 
 const onCreateDraftFailure = (data) => {
-  console.log()
   $('#noPlayer').modal('show')
 }
 // ************** Draft GET onSuccess/failure ****************
@@ -144,6 +148,8 @@ const onGetDraftsSuccess = (data) => {
   $('#section-ranking').hide()
   $('.draftList').hide()
   $('#section-handlebars').show()
+  $('#rankingnav').hide()
+  $('#handlebars').show()
   $('.draftListing').show()
   $('#section-handlebars').addClass('animated slideInRight').one(animationEnd, function () {
     $(this).removeClass('animated ' + 'slideInRight')
@@ -171,21 +177,17 @@ const onGetDraftsFailure1 = (data) => {
 }
 // ************** Draft Delete onSuccess/failure ****************
 const onDeleteDraftSuccess = (data) => {
-  console.log()
   $('#removePlayer').modal('show')
   $('#tabledf').DataTable()
 }
 
 const onDeleteDraftFailure = (data) => {
-  console.log('data')
 }
 // ************** Draft patch onSuccess/failure ****************
 
 const onAddToNotesSuccess = () => {
-  console.log('great')
 }
 const onAddToNotesFailure = () => {
-  console.log('fuck')
 }
 // ************** hide on success *********************
 

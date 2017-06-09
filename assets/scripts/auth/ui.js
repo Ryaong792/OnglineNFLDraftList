@@ -40,6 +40,7 @@ const signOutSuccess = (data) => {
   store.user = {}
   $('.intro-message2').show()
   $('.sign-in').show()
+  $('#handlebars').hide()
   $('.sign-out').hide()
   $('#rankingnav').hide()
   $('.qbrank').hide()

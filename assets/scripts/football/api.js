@@ -76,7 +76,6 @@ const destoryDraft = (id) => {
     }
   })
 }
-
 // ***************** Draft Delete *************************
 const updateNotes = (id, data) => {
   return $.ajax({
