@@ -5,6 +5,7 @@ const backToRanking = function () {
   $('#section-handlebars').hide()
   $('#section-ranking').show()
   $('.draftList').show()
+  $('#rankingnav').show()
   $('#section-ranking').addClass('animated slideInLeft').one(animationEnd, function () {
     $(this).removeClass('animated ' + 'slideInLeft')
   })
@@ -15,12 +16,14 @@ const backToRanking = function () {
   $('.krank').hide()
   $('.dstrank').hide()
   $('.draftListing').hide()
+  $('#handlebars').hide()
 }
 
 const addHandlers = () => {
   $('.carousel').carousel()
   $('#section-ranking').hide()
   $('#section-handlebars').hide()
+  $('#handlebars').hide()
   $('#rankingnav').hide()
   $('.qbrank').hide()
   $('.rbrank').hide()

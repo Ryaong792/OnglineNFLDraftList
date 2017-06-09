@@ -1,6 +1,5 @@
 'use strict'
-// const config = require('../config')
-// const store = require('../store')
+
 const getFormFields = require('../../../lib/get-form-fields')
 const footApi = require('./api.js')
 const footUi = require('./ui.js')

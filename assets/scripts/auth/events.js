@@ -2,7 +2,6 @@
 const userApi = require('./api.js')
 const userUi = require('./ui.js')
 const getFormFields = require('../../../lib/get-form-fields')
-// const store = require('../store')
 
 const onSignUp = function (event) {
   const data = getFormFields(this)
@@ -54,13 +53,14 @@ const linkAccount = function () {
   $('.change-password').hide()
   $('.sign-out').show()
 }
-
+const accountMenu = function () {
+  $('#change-password').trigger('reset')
+  $('#sign-up').trigger('reset')
+  $('#sign-in').trigger('reset')
+}
 const addHandlers = () => {
+  $('.account').on('click', accountMenu)
   $('.landing-hidden').hide()
-  // $('#sign-up').on('submit', onSignUp)
-  // $('#sign-in').on('submit', onSignIn)
-  // $('#sign-out').on('submit', onSignOut)
-  // $('#change-password').on('submit', onChgPswd)
   $('.sign-up').hide()
   $('.change-password').hide()
   $('.sign-out').hide()
