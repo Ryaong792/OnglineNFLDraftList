@@ -186,6 +186,7 @@ const onDeleteDraftFailure = (data) => {
 // ************** Draft patch onSuccess/failure ****************
 
 const onAddToNotesSuccess = () => {
+  $('#update').modal('show')
 }
 const onAddToNotesFailure = () => {
 }
