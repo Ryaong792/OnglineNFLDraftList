@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>OnglineNFLDraftList</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags unless you know what you are doing -->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Bangers"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+      <!-- Do not add `script` tags unless you know what you are doing -->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <div class="carousel slide carousel-fade" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+        <div class="item active"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        </div>
+      </div>
+<!-- end of background images -->
+
+<!--=== Header section Starts ===-->
+<div id="header" class="header-section">
+  <!-- sticky-bar Starts-->
+  <div class="sticky-bar-wrap">
+    <div class="sticky-section">
+      <div id="topbar-hold" class="nav-hold container">
+        <nav class="navbar" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--=== Site Name ===-->
+            <a class="site-name navbar-brand" href="#"><span class="logo">O</span>ngline NFL Draft List</a>
+          </div>
+
+          <!-- Main Navigation menu Starts -->
+          <div class="collapse navbar-collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="current"><a href="#header">Home</a></li>
+              <li><a href="#section-ranking" id="rankingnav">Rankings</a></li>
+              <li><a href="#section-handlebars" id="handlebars">Draft</a></li>
+              <li><a href="#section-about">About</a></li>
+              <li><a href="#section-screenshots">Projects</a></li>
+              <li>
+                <!-- ***** start of login / sign-up drop down in NAV **** -->
+                        <ul class="nav navbar-nav">
+                          <li class="dropdown account">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Account</b> <span class="caret"></span></a>
+                            <ul id="login-dp" class="dropdown-menu">
+                              <li>
+                                <div class="row sign-in">
+                                  <div class="col-md-12">
+                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="sign-in">
+                                      <div class="form-group">
+                                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                        <input type="email" name="credentials[email]" class="form-control" placeholder="Email address" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                        <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block">Sign-In</button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="bottom text-center">
+                                    Dont have an account? <a href="#" class="linkSignUp"><b>Sign-Up</b></a>
+                                  </div>
+                                </div>
+                                <!-- END of SIGN-IN -->
+                                <!-- Start of Sign-UP -->
+                                <div class="row sign-up">
+                                  <div class="col-md-12">
+                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="sign-up">
+                                      <div class="form-group">
+                                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                        <input type="email" name="credentials[email]" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                        <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <label class="sr-only" for="exampleInputPassword2">Confirm Password</label>
+                                        <input type="password" name="credentials[password_confirmation]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block">Sign-Up</button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="bottom text-center">
+                                    Already have an account? <a href="#" class="linkSignIn"><b>Sign-In</b></a>
+                                  </div>
+                                </div>
+                                <!-- End of Sign-up -->
+                                <!-- start of Singout -->
+                                <div class="row sign-out">
+                                  <div class="col-md-12">
+                                    <div class="bottom text-center">
+                                      <button type="button" class="linkChangePassword btn btn-default">Change Password
+                                        <span class="glyphicon glyphicon-user"></span>
+                                      </button>
+                                    </div>
+                                    <div class="bottom text-center">
+                                      <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="sign-out">
+                                        <button type="submit" class="btn btn-warning btn-block">Sign Out</button>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- end of Sign-out -->
+                                <!-- Start of change password -->
+                                <div class="row change-password">
+                                  <div class="col-md-12">
+                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="change-password">
+                                      <div class="form-group">
+                                        <label class="sr-only" for="exampleInputPassword2">Old Password</label>
+                                        <input type="password" name="passwords[old]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <label class="sr-only" for="exampleInputPassword2">New Password</label>
+                                        <input type="password" name="passwords[new]" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block">change-password</button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="bottom text-center">
+                                    Want to go back? <a href="#" class="linkAccount"><b>Account Menu</b></a>
+                                  </div>
+                                </div>
+                                <!-- End of change password -->
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      </ul>
+                        <!-- /.navbar-collapse -->
+                      </div>
+                    </nav>
+                    </div>
+                    <!-- end of DIV container -->
+                  <!-- END OF NAV BAR -->
+
+          </div>
+          <!-- Main Navigation menu ends-->
+      </div>
+    </div>
+  <!-- sticky-bar Ends-->
+  <!--=== Header section Ends ===-->
+  <!-- ERROR/Success MESSAGES -->
+
+  <div id="signUpSuccess" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-success">
+          <h4>Sign-Up has been completed!</h4>
+          <p>Your acount has been created successfully. Please sign-in to start your OngLine NFL Draft List!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="signUpFailure" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-danger alert-dismissible text-center" role="alert">
+          <h4>Sign-Up was unsuccessful!</h4>
+          <p>Either your email account is already in used or your password does not match. Please try again!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="chgPswdSuccess" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-success">
+          <h4>Password Change Successfully!</h4>
+          <p>Change password performed successfully. Please remember to use new password!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="chgPswdFailure" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-danger alert-dismissible text-center" role="alert">
+          <h4>Password Change Failed!</h4>
+          <p>The Old Password you enter incorrect. Please try again!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="signInFailure" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-danger alert-dismissible text-center" role="alert">
+          <h4>Sign-In Failed!</h4>
+          <p>Either your email or password is incorrect. Please try again!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="welcome" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-success alert-dismissible text-center" role="alert">
+          <h4>Welcome!</h4>
+          <p>Enjoy your NFL Draft list experience!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="signOut" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-success alert-dismissible text-center" role="alert">
+          <h4>Signed Out</h4>
+          <p>You are now signed out. Have a good day!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="addPlayer" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-success alert-dismissible text-center" role="alert">
+          <h4>Draft Success!</h4>
+          <p>Added Player or Defensive Team to your Draft List!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="noPlayer" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-danger alert-dismissible text-center" role="alert">
+          <h4>Draft Failed!</h4>
+          <p>Player or Defensive Team is already in your Draft List!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="removePlayer" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-success alert-dismissible text-center" role="alert">
+          <h4>Removed From Draft Success!</h4>
+          <p>Player or Defensive Team have been removed from your Draft List!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="update" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="alert alert-success alert-dismissible text-center" role="alert">
+          <h4>Notes Updated Success!</h4>
+          <p>Notes has been udpated successfully!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of error messages -->
+  <!--=== Home Section Starts ===-->
+  <section id="section-home" class="home-section-wrap center">
+    <div class="section-overlay"></div>
+    <div class="container home">
+      <div class="row">
+        <h1 class="well-come">Welcome</h1>
+
+        <div class="col-md-8 col-md-offset-2">
+          <p class="intro-message">Ongline NFL Draft List to help your drafting needs!</p>
+          <h4 class="intro-message2"><p>Sign-in to see Ranking List and your personal Draft List!</p></h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=== Home Section Ends ===-->
+
+<!--=== Ranking section Starts ===-->
+	<section id="section-ranking" class="ranking-wrap">
+  <button class='btn btn-default draftList DRAFTS'>Your Current Draft List! <span class="glyphicon glyphicon-list glyphicon-list1"></span></button><br/>
+    <h2 class="Ranking"> Draft rankings </h2>
+     <div id="stack1" class="card-container start">
+       <section id="card1" class="card card1">
+         <div class="cardimage">
+         <img src="https://s3.amazonaws.com/ryaong792/QB.jpg"/>
+         </div>
+         <p><h3>Quarterback</h3> <br/>Fantasy Ranking <br/>1-36</p>
+
+         <button class="btn btn-default QBS">
+            Draft Ranking
+           <span class="glyphicon glyphicon-list"></span>
+         </button>
+            </section>
+
+            <section id="card2" class="card card2">
+              <div class="cardimage">
+              <img src="https://s3.amazonaws.com/ryaong792/RB.jpg" />
+              </div>
+              <p><h3>Running-Back</h3> <br/>Fantasy Ranking <br/>1-158</p>
+              <button class="btn btn-default RBS">
+                 Draft Ranking
+                <span class="glyphicon glyphicon-list"></span>
+              </button>
+            </section>
+
+            <section id="card3" class="card card3">
+              <div class="cardimage">
+              <img src="https://s3.amazonaws.com/ryaong792/WR.jpg" />
+              </div>
+              <p><h3>Wide-Receiver</h3> <br/>Fantasy Ranking <br/>1-216</p>
+              <button class="btn btn-default WRS">
+                 Draft Ranking
+                <span class="glyphicon glyphicon-list"></span>
+              </button>
+            </section>
+
+              <section id="card4" class="card card4">
+                <div class="cardimage">
+                <img src="https://s3.amazonaws.com/ryaong792/TE.jpg" />
+                </div>
+                <p><h3>Tight-End</h3> <br/>Fantasy Ranking <br/>1-96</p>
+                <button class="btn btn-default TES">
+                   Draft Ranking
+                  <span class="glyphicon glyphicon-list"></span>
+                </button>
+              </section>
+
+                <section id="card5" class="card card5">
+                  <div class="cardimage">
+                  <img src="https://s3.amazonaws.com/ryaong792/Kicker.jpg" />
+                  </div>
+                  <p><h3>Kicker</h3> <br/>Fantasy Ranking <br/>1-36</p>
+                  <button class="btn btn-default KS">
+                     Draft Ranking
+                    <span class="glyphicon glyphicon-list"></span>
+                  </button>
+                 </section>
+
+                  <section id="card6" class="card card6">
+                    <div class="cardimage">
+                    <img src="https://s3.amazonaws.com/ryaong792/DST.jpg"/>
+                    </div>
+                    <p><h3>Defensive Team</h3> <br/>Fantasy Ranking <br/>1-32</p>
+                    <button class="btn btn-default DSTS">
+                       Draft Ranking
+                      <span class="glyphicon glyphicon-list"></span>
+                    </button>
+                  </section>
+        </div>
+	</section>
+	<!--=== ranking section Ends ===-->
+  <!--=== Ranking handlebars section Starts ===-->
+<section id="section-handlebars" class="handlebars-wrap">
+  <button class='btn btn-default backToRanking'> <span class="glyphicon glyphicon-arrow-left"></span>Back to Draft Rankings</button>
+  <button class='btn btn-default draftList DRAFTS'>Your Current Draft List! <span class="glyphicon glyphicon-list glyphicon-list1"></span></button>
+<!-- **************** QB Handlebars Table list ************************** -->
+<div class='qbrank QB'>
+</div>
+<!-- **************** RB Handlebars Table list ************************** -->
+<div class='rbrank RB'>
+</div>
+<!-- **************** WR Handlebars Table list ************************** -->
+<div class='wrrank WR'>
+</div>
+<!-- **************** TE Handlebars Table list ************************** -->
+<div class='terank TE'>
+</div>
+<!-- **************** Kickers Handlebars Table list ************************** -->
+<div class='krank K'>
+</div>
+<!-- **************** Def Team Handlebars Table list ************************** -->
+<div class='dstrank DST'>
+</div>
+<!-- **************** Draft List Handlebars Table list ************************** -->
+<div class='draftListing DRAFT'>
+</div>
+</section>
+
+<!-- **************** Video list ************************** -->
+
+
+
+<section id="section-video col-sm-12" class="section-video-wrap">
+  <div class="section-overlay"></div>
+  <div class="container big-video center">
+    <div class="row">
+      <div class="col-md-12 section-title">
+        <h3>Dont Let Your Draft Day End Like This!</h3>
+      </div>
+        <p class="intro-message">Be prepared with Ongline NFL Draft List!</p>
+      <div class="video">
+        <div class="row">
+          <div class="col-sm-12">
+              <iframe class="embed-responsive-item" src="//www.youtube.com/embed/1oHKB5prG7U" width="600" height="400"></iframe>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="section-about" class="screenabout-wrap">
+  <div class="row porfolio-container">
+		<div class="col-md-10 col-md-offset-1 center section-title1">
+			<h3>Ryan Ongchoa</h3>
+		</div>
+      <div class="col-md-5 col-sm-5">
+        <div class="about__slot">
+          <img class="headshot" src="https://s3.amazonaws.com/ryaong792/Ryan1.jpg" id="circle"/>
+        </div>
+			</div>
+				<!-- About Quote -->
+			  <div class="col-md-6 col-sm-6 about_quote">
+          <p>"I decided to move in a new direction with my career.  With no prior coding experience,
+            I started the WDI boot camp course on March 20th through June 9th, 2017.
+            The projects below were made during my 3-month course with "Ongline NFL Draft List"
+            being my final capstone project! With this being my initial stage of my coding career,
+            I want to end this stage with style!"
+          </p>
+				</div>
+  </div>
+</section>
+<!--=== ScreenShots Projects section Starts ===-->
+<section id="section-screenshots" class="screenshots-wrap">
+  <div class="container screenshots">
+	  <div class="row porfolio-container">
+		  <div class="col-md-10 col-md-offset-1 center section-title">
+			  <h3>Other Projects</h3>
+			</div>
+			<!-- Single screenshot starts -->
+			<div class="col-md-4 col-sm-4 col-xs-6">
+			  <div class="screenshot">
+				  <div class="photo-box">
+					  <img src="https://s3.amazonaws.com/ryaong792/Project4/Project1.png" alt="" />
+					    <div class="photo-overlay">
+							  <h4>Project 1 Tic-Tac-Toe</h4>
+							</div>
+					</div>
+				</div>
+			</div>
+				<!-- Single screenshot ends -->
+				<!-- Single screenshot starts -->
+			<div class="col-md-4 col-sm-4 col-xs-6">
+				<div class="screenshot">
+					<div class="photo-box">
+						<img src="https://s3.amazonaws.com/ryaong792/Project4/Project2.png" alt="" />
+						  <div class="photo-overlay">
+							<h4>Project 2 ToDoList</h4>
+						  </div>
+					</div>
+				</div>
+			</div>
+				<!-- Single screenshot ends -->
+				<!-- Single screenshot starts -->
+			<div class="col-md-4 col-sm-4 col-xs-6">
+				<div class="screenshot">
+					<div class="photo-box">
+						<img src="https://s3.amazonaws.com/ryaong792/Project4/Project3.png" alt="" />
+							<div class="photo-overlay">
+								<h4>Project 3 Ecommerce</h4>
+							</div>
+					</div>
+				</div>
+			</div>
+				<!-- Single screenshot ends -->
+    </div>
+  </div>
+</section>
+</body>
+</html>
