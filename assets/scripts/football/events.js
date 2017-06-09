@@ -69,7 +69,6 @@ const getDraft1 = function (event) {
 // ************* Draft Delete ************************************
 const deleteDraft = function () {
   const id = $(this).attr('data-id')
-  console.log($(this).attr('data-id'))
   footApi.destoryDraft(id)
   .then(footUi.onDeleteDraftSuccess)
   .catch(footUi.onDeleteDraftFailure)
@@ -80,8 +79,6 @@ const addToNotes = function () {
   event.preventDefault()
   const data = $(this).siblings('input').val()
   const id = $(this).attr('data-id')
-  console.log($(this).attr('data-id'))
-  console.log(data)
   footApi.updateNotes(id, data)
     .then(footUi.onAddToNotesSuccess)
     .catch(footUi.onAddToNotesFailure)
